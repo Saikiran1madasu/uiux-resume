@@ -11,11 +11,12 @@ function Heading({ children }: { children: string }) {
 export function AtsResume() {
   const skillLine = [
     ...Object.values(resume.skills).flat(),
-    "Figma",
-    "User research",
-    "Fintech",
-    "Marketing websites",
-    "Responsive design",
+    "Product Design",
+    "Interaction Design",
+    "Design Systems",
+    "Accessibility (WCAG)",
+    "Responsive Design",
+    "Fintech UI",
   ].filter((v, i, a) => a.indexOf(v) === i);
 
   return (

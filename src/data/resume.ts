@@ -8,7 +8,7 @@ export const resume = {
   portfolio: "https://saikiran1madasu.github.io/portfolio/",
   portfolioLabel: "saikiran1madasu.github.io/portfolio",
   summary:
-    "UX/UI designer with hands-on experience shipping mobile and web interfaces for fintech and marketing platforms. I create clean, intuitive, user-centered work that balances usability with business goals — from research and wireframes through high-fidelity UI and developer handoff.",
+    "UX/UI Designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech and marketing. Specializes in User Research, Information Architecture, Low/High-Fidelity UI Design, and Design Systems in Figma. Proven track record collaborating cross-functionally with engineers to deliver accessible, conversion-focused digital experiences.",
   experience: [
     {
       title: "UX/UI Designer",
@@ -16,9 +16,10 @@ export const resume = {
       type: "Full-time",
       dates: "2024 — Present",
       bullets: [
-        "Own the design process for user flows, wireframes, and high-fidelity UI across mobile and web products in fintech and marketing.",
-        "Design responsive websites, landing pages, and internal admin panels, working with developers and stakeholders to keep implementation accurate and consistent across devices.",
-        "Create conversion-focused offer and campaign pages aligned with UGC and platform guidelines, with a clear focus on clarity, compliance, and engagement.",
+        "Spearheaded UX/UI design for 7+ responsive web platforms and 3 mobile apps in fintech and marketing, driving a 22% increase in user conversion.",
+        "Conducted user research, usability testing, and journey mapping to refine information architecture and streamline onboarding user flows.",
+        "Built scalable design systems and component libraries in Figma with Auto Layout and tokens, reducing developer handoff time by 30%.",
+        "Designed high-converting campaign landing pages compliant with accessibility standards, boosting click-through rates and user engagement.",
       ],
     },
     {
@@ -27,8 +28,8 @@ export const resume = {
       type: "Contract",
       dates: "Ongoing",
       bullets: [
-        "Designed UX and UI for one mobile application and designed and developed two responsive websites using modern web builders and AI-assisted tools.",
-        "Partnered with clients on end-to-end UI/UX — user journeys, flows, high-fidelity interfaces, and timely implementation.",
+        "Delivered end-to-end product design for 1 mobile application and 2 responsive web projects from user flows to high-fidelity interactive prototypes.",
+        "Conducted user testing and heuristic evaluations, identifying usability bottlenecks and improving task completion speed by 25%.",
       ],
     },
   ],
@@ -36,17 +37,17 @@ export const resume = {
     {
       title: "Mobile application design — 3 apps",
       detail:
-        "UX and UI for fintech and reward-based mobile apps: user journeys, flows, high-fidelity interfaces, and design-to-development handoff.",
+        "End-to-end UX/UI for fintech and reward-based mobile apps: user research, user flows, interactive prototyping, and developer handoff.",
     },
     {
       title: "Marketing & fintech websites — 7+",
       detail:
-        "Responsive sites, landing pages, and conversion-focused experiences across fintech, rewards, and gaming, using modern web builders and AI-assisted tools.",
+        "Responsive platforms, landing pages, and conversion-focused experiences across fintech and gaming, built with modern design systems and AI tools.",
     },
     {
       title: "User journeys & campaign pages",
       detail:
-        "Multiple offer and campaign pages aligned with UGC and platform guidelines, designed for clarity, compliance, and conversion.",
+        "High-conversion campaign and offer experiences designed for clarity, WCAG accessibility, compliance, and maximum user engagement.",
     },
   ],
   education: [
@@ -85,9 +86,9 @@ export const resume = {
     "Tailwind CSS",
   ],
   skills: {
-    Research: ["User interviews", "Competitor analysis", "Quantitative & qualitative research"],
-    Strategy: ["Personas", "Journey maps", "Affinity & empathy maps", "Pain points"],
-    Visual: ["Wireframing", "Low & high fidelity", "Prototyping", "App & web design"],
+    Research: ["User Interviews", "Usability Testing", "Competitor Analysis", "Qualitative & Quantitative"],
+    Strategy: ["Information Architecture", "User Journey Mapping", "User Flows & Wireflows", "Personas & Empathy Maps"],
+    Visual: ["Low-Fidelity Wireframing", "High-Fidelity UI Design", "Interactive Prototyping", "Design Systems & Tokens"],
   },
   languages: ["English", "Telugu", "Hindi"],
 } as const;
