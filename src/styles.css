@@ -45,7 +45,8 @@
   }
 }
 
-.resume-sheet {
+.resume-sheet,
+.resume-page {
   width: 100%;
   max-width: 210mm;
   min-height: 297mm;
@@ -72,18 +73,27 @@
     display: none !important;
   }
 
-  .resume-sheet {
+  .resume-sheet,
+  .resume-page {
     box-shadow: none !important;
     border: none !important;
     margin: 0 auto !important;
     width: 210mm !important;
     min-height: 297mm !important;
     height: 297mm !important;
-    padding: 10mm 12mm !important;
+    max-height: 297mm !important;
+    padding: 11mm 13mm !important;
     box-sizing: border-box !important;
-    page-break-after: avoid !important;
+    page-break-after: always !important;
+    break-after: page !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     overflow: hidden !important;
+  }
+
+  .resume-page:last-child,
+  .resume-sheet:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
   }
 }
