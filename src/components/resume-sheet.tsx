@@ -209,7 +209,6 @@ export function ResumeSheet() {
                           <span className="text-[11px] font-semibold text-muted">{ed.dates}</span>
                         </div>
                         <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-accent font-semibold">{ed.credential}</p>
-                        <p className="mt-1 text-[11px] sm:text-[11.5px] text-ink-soft leading-snug">{ed.note}</p>
                       </div>
                     </div>
                   ))}

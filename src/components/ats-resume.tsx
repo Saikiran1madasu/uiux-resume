@@ -138,7 +138,6 @@ export function AtsResume() {
                     </span>
                     <span className="font-semibold text-[11.5px] sm:text-[12px]">{ed.dates.replace("—", "-")}</span>
                   </div>
-                  <p className="mt-0.5 text-[11px] sm:text-[11.5px] text-ink/80">{ed.note}</p>
                 </div>
               ))}
             </div>

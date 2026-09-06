@@ -63,13 +63,11 @@ export const resume = {
       school: "Aditya University",
       credential: "B.Tech, Mining Engineering",
       dates: "2020 — 2023",
-      note: "Applied analytical problem-solving, ergonomics, and systems thinking to human-computer interaction and digital product design.",
     },
     {
       school: "Anurag Engineering College",
       credential: "Diploma, Mining Engineering",
       dates: "2017 — 2020",
-      note: "Foundation in engineering design, technical drafting, and structured project methodologies.",
     },
   ],
   certifications: [
