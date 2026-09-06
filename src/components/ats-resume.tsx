@@ -146,11 +146,14 @@ export function AtsResume() {
           {/* Certifications */}
           <section className="mt-3.5 sm:mt-4">
             <Heading>Certifications & Credentials</Heading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 font-ats text-[12px] sm:text-[12.5px] text-ink">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 font-ats text-[12px] sm:text-[12.5px] text-ink">
               {resume.certifications.map((c) => (
-                <div key={c.name} className="flex items-baseline justify-between">
-                  <span className="font-medium">• {c.name}</span>
-                  <span className="text-ink font-semibold text-[11px] shrink-0 ml-1">({c.org})</span>
+                <div key={c.name}>
+                  <div className="flex items-baseline justify-between">
+                    <span className="font-bold">• {c.name}</span>
+                    <span className="text-ink font-semibold text-[11px] shrink-0 ml-1">({c.org})</span>
+                  </div>
+                  <p className="mt-0.5 pl-3 text-[11px] sm:text-[11.5px] text-ink/85 leading-snug">{c.note}</p>
                 </div>
               ))}
             </div>

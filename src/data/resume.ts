@@ -71,12 +71,36 @@ export const resume = {
     },
   ],
   certifications: [
-    { name: "Google UX Design Professional Certificate", org: "Coursera" },
-    { name: "User Experience Design", org: "Accenture" },
-    { name: "Human-Centered Design 201: Prototyping", org: "Acumen Academy" },
-    { name: "Introduction to Human-Centered Design", org: "Acumen Academy" },
-    { name: "Visual Communication & Design Theory", org: "NPTEL (Swayam)" },
-    { name: "Augmenting Design Thinking with HCI", org: "NPTEL (Swayam)" },
+    {
+      name: "Google UX Design Professional Certificate",
+      org: "Coursera",
+      note: "End-to-end UX research, wireframing, interactive prototyping, and cross-platform Figma design systems.",
+    },
+    {
+      name: "User Experience Design",
+      org: "Accenture",
+      note: "Design strategy, usability testing, heuristic evaluation, and cross-functional agile collaboration.",
+    },
+    {
+      name: "Human-Centered Design 201: Prototyping",
+      org: "Acumen Academy",
+      note: "Rapid concept testing, low-to-high fidelity iterations, and interactive user validation.",
+    },
+    {
+      name: "Introduction to Human-Centered Design",
+      org: "Acumen Academy",
+      note: "User empathy mapping, field interview methods, and problem framing for impactful solutions.",
+    },
+    {
+      name: "Visual Communication & Design Theory",
+      org: "NPTEL (Swayam)",
+      note: "Visual hierarchy, grid layouts, typography principles, and color psychology.",
+    },
+    {
+      name: "Augmenting Design Thinking with HCI",
+      org: "NPTEL (Swayam)",
+      note: "Cognitive load optimization, interface ergonomics, and human-computer interaction frameworks.",
+    },
   ],
   tools: [
     "Figma (Auto Layout, Tokens, Components)",

@@ -214,17 +214,22 @@ export function ResumeSheet() {
                   ))}
                 </div>
 
-                {/* Certifications: 3x2 Grid */}
-                <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {/* Certifications: 2-column Grid */}
+                <div className="grid gap-2.5 sm:grid-cols-2">
                   {resume.certifications.map((c) => (
                     <div
                       key={c.name}
-                      className="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-2 text-xs"
+                      className="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-2.5"
                     >
-                      <p className="font-semibold text-ink leading-snug text-[11.5px] sm:text-[12px]">{c.name}</p>
-                      <p className="mt-1 text-[10px] font-bold uppercase tracking-wider text-accent">
-                        {c.org}
-                      </p>
+                      <div>
+                        <div className="flex items-baseline justify-between gap-1.5">
+                          <p className="font-semibold text-ink leading-snug text-[12px] sm:text-[12.5px]">{c.name}</p>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-accent shrink-0">
+                            {c.org}
+                          </span>
+                        </div>
+                        <p className="mt-1 text-[11px] sm:text-[11.5px] text-ink-soft leading-snug">{c.note}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
