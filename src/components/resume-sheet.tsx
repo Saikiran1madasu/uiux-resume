@@ -248,7 +248,7 @@ export function ResumeSheet() {
             </section>
 
             {/* Languages */}
-            <section className="flex flex-wrap items-center justify-between gap-2 border-t border-rule/80 pt-2.5 text-xs text-ink-soft">
+            <section className="mt-5 sm:mt-6 flex flex-wrap items-center justify-between gap-2 border-t border-rule/80 pt-3.5 text-xs text-ink-soft">
               <span className="font-bold uppercase tracking-wider text-accent">Languages</span>
               <span className="font-medium text-ink text-[12.5px]">{resume.languages.join("   ·   ")}</span>
             </section>
@@ -256,7 +256,7 @@ export function ResumeSheet() {
         </div>
 
         {/* Page 2 Footer */}
-        <footer className="mt-4 flex items-center justify-between border-t border-rule/70 pt-2.5 text-xs text-muted">
+        <footer className="mt-5 flex items-center justify-between border-t border-rule/70 pt-3 text-xs text-muted">
           <span className="font-medium text-ink-soft">{resume.email} · {resume.phone}</span>
           <span className="font-semibold">Page 2 of 2</span>
         </footer>

@@ -167,14 +167,14 @@ export function AtsResume() {
           </section>
 
           {/* Languages */}
-          <section className="mt-4 sm:mt-5">
+          <section className="mt-5 sm:mt-6">
             <Heading>Languages</Heading>
             <p className="font-ats text-[12.5px] sm:text-[13px] text-ink">{resume.languages.join("   ·   ")}</p>
           </section>
         </div>
 
         {/* Page 2 Footer */}
-        <footer className="mt-4 flex items-center justify-between border-t border-ink/40 pt-2.5 text-xs text-ink">
+        <footer className="mt-5 flex items-center justify-between border-t border-ink/40 pt-3 text-xs text-ink">
           <span>{resume.email} &nbsp;|&nbsp; {resume.phone}</span>
           <span className="font-bold">Page 2 of 2</span>
         </footer>
