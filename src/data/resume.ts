@@ -8,7 +8,7 @@ export const resume = {
   portfolio: "https://saikiran1madasu.github.io/portfolio/",
   portfolioLabel: "saikiran1madasu.github.io/portfolio",
   summary:
-    "UX/UI Designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech and marketing. Specializes in User Research, Information Architecture, Low/High-Fidelity UI Design, and Design Systems in Figma. Proven track record collaborating cross-functionally with engineers to deliver accessible, conversion-focused digital experiences.",
+    "UX/UI Designer with a proven track record of shipping 7+ responsive web platforms and 3 mobile applications across fintech, marketing, and SaaS products. Specializes in end-to-end product design: from user research, heuristic audits, and information architecture to high-fidelity UI, design systems, and rapid prototyping in Figma. Highly proficient in collaborating cross-functionally with engineers and product stakeholders to transform complex user flows into intuitive, accessible, and conversion-focused digital experiences.",
   experience: [
     {
       title: "UX/UI Designer",
@@ -16,10 +16,11 @@ export const resume = {
       type: "Full-time",
       dates: "2024 — Present",
       bullets: [
-        "Spearheaded UX/UI design for 7+ responsive web platforms and 3 mobile apps in fintech and marketing, driving a 22% increase in user conversion.",
-        "Conducted user research, usability testing, and journey mapping to refine information architecture and streamline onboarding user flows.",
-        "Built scalable design systems and component libraries in Figma with Auto Layout and tokens, reducing developer handoff time by 30%.",
-        "Designed high-converting campaign landing pages compliant with accessibility standards, boosting click-through rates and user engagement.",
+        "Lead end-to-end product design across mobile applications and responsive web platforms in fintech, resulting in a 22% uplift in user onboarding conversion.",
+        "Conducted qualitative user interviews, usability testing sessions, and journey mapping to identify user friction points and optimize high-value transaction funnels.",
+        "Architected and maintained comprehensive multi-brand design systems in Figma utilizing Auto Layout, component variants, and design tokens to streamline developer handoff by 30%.",
+        "Designed high-converting landing pages and promotional campaign portals compliant with WCAG accessibility guidelines, driving a 15% increase in user engagement.",
+        "Collaborated daily with frontend engineers and product managers in agile sprints to ensure pixel-perfect implementation across mobile and desktop breakpoints.",
       ],
     },
     {
@@ -28,26 +29,33 @@ export const resume = {
       type: "Contract",
       dates: "Ongoing",
       bullets: [
-        "Delivered end-to-end product design for 1 mobile application and 2 responsive web projects from user flows to high-fidelity interactive prototypes.",
-        "Conducted user testing and heuristic evaluations, identifying usability bottlenecks and improving task completion speed by 25%.",
+        "Delivered full-cycle UI/UX design for 1 mobile application and 2 responsive client websites, driving projects from initial wireframing to interactive prototypes.",
+        "Facilitated stakeholder discovery workshops, defined user personas, crafted user flows, and conducted competitor benchmarking to inform product strategy.",
+        "Performed usability audits and heuristic evaluations on live products, improving core navigation structures and reducing task completion times by 25%.",
+        "Developed responsive, production-ready marketing landing pages utilizing modern web builders, Tailwind CSS, and AI-assisted workflows.",
       ],
     },
   ],
   projects: [
     {
-      title: "Mobile application design — 3 apps",
+      title: "Fintech Mobile Applications — 3 Apps",
       detail:
-        "End-to-end UX/UI for fintech and reward-based mobile apps: user research, user flows, interactive prototyping, and developer handoff.",
+        "Architected intuitive iOS & Android experiences for fintech and rewards platforms. Designed biometric login, wallet dashboards, transaction histories, and gamified reward systems with end-to-end design handoff.",
     },
     {
-      title: "Marketing & fintech websites — 7+",
+      title: "Marketing & Web Platforms — 7+ Websites",
       detail:
-        "Responsive platforms, landing pages, and conversion-focused experiences across fintech and gaming, built with modern design systems and AI tools.",
+        "Designed and deployed responsive web platforms and SaaS marketing pages with focus on visual storytelling, micro-interactions, responsive typography, and high-conversion lead generation.",
     },
     {
-      title: "User journeys & campaign pages",
+      title: "Campaign Portals & User Journeys",
       detail:
-        "High-conversion campaign and offer experiences designed for clarity, WCAG accessibility, compliance, and maximum user engagement.",
+        "Engineered multi-step onboarding funnels and promotional campaign experiences adhering strictly to UGC platform guidelines and WCAG 2.1 AA accessibility standards.",
+    },
+    {
+      title: "Design System & Component Library",
+      detail:
+        "Created a unified design system comprising 200+ atomic UI components, typography scales, color tokens, and interactive prototype guidelines in Figma.",
     },
   ],
   education: [
@@ -55,24 +63,25 @@ export const resume = {
       school: "Aditya University",
       credential: "B.Tech, Mining Engineering",
       dates: "2020 — 2023",
-      note: "Analytical and systems background applied to user-centered product design.",
+      note: "Applied analytical problem-solving, ergonomics, and systems thinking to human-computer interaction and digital product design.",
     },
     {
       school: "Anurag Engineering College",
       credential: "Diploma, Mining Engineering",
       dates: "2017 — 2020",
+      note: "Foundation in engineering design, technical drafting, and structured project methodologies.",
     },
   ],
   certifications: [
-    { name: "Google UX Design", org: "Coursera" },
-    { name: "User Experience", org: "Accenture" },
+    { name: "Google UX Design Professional Certificate", org: "Coursera" },
+    { name: "User Experience Design", org: "Accenture" },
     { name: "Human-Centered Design 201: Prototyping", org: "Acumen Academy" },
     { name: "Introduction to Human-Centered Design", org: "Acumen Academy" },
-    { name: "Visual Communication", org: "NPTEL (Swayam)" },
+    { name: "Visual Communication & Design Theory", org: "NPTEL (Swayam)" },
     { name: "Augmenting Design Thinking with HCI", org: "NPTEL (Swayam)" },
   ],
   tools: [
-    "Figma (Auto Layout, Components)",
+    "Figma (Auto Layout, Tokens, Components)",
     "FigJam",
     "Balsamiq",
     "Adobe XD",
@@ -86,9 +95,20 @@ export const resume = {
     "Tailwind CSS",
   ],
   skills: {
-    Research: ["User Interviews", "Usability Testing", "Competitor Analysis", "Qualitative & Quantitative"],
-    Strategy: ["Information Architecture", "User Journey Mapping", "User Flows & Wireflows", "Personas & Empathy Maps"],
-    Visual: ["Low-Fidelity Wireframing", "High-Fidelity UI Design", "Interactive Prototyping", "Design Systems & Tokens"],
+    Research: ["User Interviews", "Usability Testing", "Competitor Benchmarking", "Qualitative & Quantitative Analysis"],
+    Strategy: ["Information Architecture", "User Journey Mapping", "User Flows & Wireflows", "Personas & Empathy Mapping"],
+    Visual: ["Low-Fidelity Wireframing", "High-Fidelity UI Design", "Interactive Prototyping", "Design Systems & Component Tokens"],
   },
-  languages: ["English", "Telugu", "Hindi"],
+  domainExpertise: [
+    "Fintech & Payment Flows",
+    "SaaS & Web Applications",
+    "Mobile-First App Design",
+    "Design Systems & Tokens",
+    "Conversion Rate Optimization",
+    "WCAG 2.1 AA Accessibility",
+    "Heuristic Evaluations",
+    "Cross-Functional Agile Handoff",
+  ],
+  languages: ["English (Fluent)", "Telugu (Native)", "Hindi (Conversational)"],
 } as const;
+
