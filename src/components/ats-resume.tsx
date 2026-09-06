@@ -91,17 +91,8 @@ export function AtsResume() {
       {/* PAGE 2 */}
       <article className="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-11 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
         <div>
-          {/* Header Sub-bar */}
-          <header className="text-left border-b-2 border-ink pb-3.5 flex items-baseline justify-between">
-            <div>
-              <h2 className="font-ats text-2xl font-bold uppercase tracking-tight text-ink">{resume.name}</h2>
-              <p className="font-ats text-xs sm:text-[13px] font-semibold text-ink mt-0.5">{resume.role} · Technical Profile & Credentials</p>
-            </div>
-            <p className="font-ats text-[13px] font-medium text-ink">{resume.email}</p>
-          </header>
-
           {/* Skills & Tools */}
-          <section className="mt-5 sm:mt-6">
+          <section>
             <Heading>Technical & Design Skills</Heading>
             <ul className="list-disc pl-5 font-ats text-[13px] sm:text-[13.5px] leading-relaxed text-ink space-y-2">
               <li>
@@ -175,7 +166,7 @@ export function AtsResume() {
 
         {/* Page 2 Footer */}
         <footer className="mt-6 flex items-center justify-between border-t border-ink/40 pt-3 text-[12px] sm:text-[12.5px] text-ink">
-          <span>{resume.email} &nbsp;|&nbsp; {resume.phone}</span>
+          <span>{resume.name} — UX/UI Designer &nbsp;|&nbsp; {resume.email}</span>
           <span className="font-bold">Page 2 of 2</span>
         </footer>
       </article>

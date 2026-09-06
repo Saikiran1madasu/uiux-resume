@@ -115,23 +115,8 @@ export function ResumeSheet() {
       {/* PAGE 2 */}
       <article className="resume-page mx-auto flex flex-col justify-between bg-cream px-8 py-8 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-11 sm:py-9">
         <div>
-          {/* Header Sub-bar */}
-          <header className="flex items-baseline justify-between border-b border-rule pb-3.5">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-ink">{resume.name}</h2>
-              <p className="font-sans text-xs sm:text-[13px] font-semibold uppercase tracking-[0.22em] text-accent">
-                {resume.role} · Technical Profile & Credentials
-              </p>
-            </div>
-            <div className="text-right text-[12.5px] text-ink-soft">
-              <a href={resume.portfolio} target="_blank" rel="noreferrer" className="text-accent font-medium hover:underline">
-                {resume.portfolioLabel}
-              </a>
-            </div>
-          </header>
-
           {/* Page 2 Sections */}
-          <div className="mt-5 space-y-5 sm:space-y-5.5">
+          <div className="space-y-5 sm:space-y-6">
             {/* Core Design Skills */}
             <section>
               <SectionLabel>Core Design Skills</SectionLabel>
@@ -257,7 +242,7 @@ export function ResumeSheet() {
 
         {/* Page 2 Footer */}
         <footer className="mt-6 flex items-center justify-between border-t border-rule/70 pt-3 text-[12px] sm:text-[12.5px] text-muted">
-          <span className="font-medium text-ink-soft">{resume.email} · {resume.phone}</span>
+          <span className="font-medium text-ink-soft">Madasu Sai Kiran — UX/UI Designer · {resume.email}</span>
           <span className="font-semibold">Page 2 of 2</span>
         </footer>
       </article>
