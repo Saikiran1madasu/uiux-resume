@@ -132,10 +132,10 @@ export function AtsResume() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 font-ats text-[12px] sm:text-[12.5px] text-ink">
               {resume.certifications.map((c) => (
                 <div key={c.name}>
-                  <div className="flex items-baseline justify-between">
+                  <p className="font-ats leading-snug">
                     <span className="font-bold">• {c.name}</span>
-                    <span className="text-ink font-semibold text-[11px] shrink-0 ml-1">({c.org})</span>
-                  </div>
+                    <span className="text-ink font-semibold text-[11.5px]"> &nbsp;({c.org})</span>
+                  </p>
                   <p className="mt-0.5 pl-3 text-[11px] sm:text-[11.5px] text-ink/85 leading-snug">{c.note}</p>
                 </div>
               ))}

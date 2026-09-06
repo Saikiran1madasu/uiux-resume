@@ -204,12 +204,12 @@ export function ResumeSheet() {
                       className="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-2.5"
                     >
                       <div>
-                        <div className="flex items-baseline justify-between gap-1.5">
-                          <p className="font-semibold text-ink leading-snug text-[12px] sm:text-[12.5px]">{c.name}</p>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-accent shrink-0">
-                            {c.org}
+                        <p className="font-semibold text-ink leading-snug text-[12px] sm:text-[12.5px]">
+                          {c.name}
+                          <span className="ml-1.5 inline-block text-[10px] font-bold uppercase tracking-wider text-accent font-sans">
+                            ({c.org})
                           </span>
-                        </div>
+                        </p>
                         <p className="mt-1 text-[11px] sm:text-[11.5px] text-ink-soft leading-snug">{c.note}</p>
                       </div>
                     </div>
