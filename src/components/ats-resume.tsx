@@ -126,6 +126,22 @@ export function AtsResume() {
             </p>
           </section>
 
+          {/* Certifications */}
+          <section className="mt-3.5 sm:mt-4">
+            <Heading>Certifications & Credentials</Heading>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 font-ats text-[12px] sm:text-[12.5px] text-ink">
+              {resume.certifications.map((c) => (
+                <div key={c.name}>
+                  <div className="flex items-baseline justify-between">
+                    <span className="font-bold">• {c.name}</span>
+                    <span className="text-ink font-semibold text-[11px] shrink-0 ml-1">({c.org})</span>
+                  </div>
+                  <p className="mt-0.5 pl-3 text-[11px] sm:text-[11.5px] text-ink/85 leading-snug">{c.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Education */}
           <section className="mt-3.5 sm:mt-4">
             <Heading>Education</Heading>
@@ -138,22 +154,6 @@ export function AtsResume() {
                     </span>
                     <span className="font-semibold text-[11.5px] sm:text-[12px]">{ed.dates.replace("—", "-")}</span>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Certifications */}
-          <section className="mt-3.5 sm:mt-4">
-            <Heading>Certifications & Credentials</Heading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 font-ats text-[12px] sm:text-[12.5px] text-ink">
-              {resume.certifications.map((c) => (
-                <div key={c.name}>
-                  <div className="flex items-baseline justify-between">
-                    <span className="font-bold">• {c.name}</span>
-                    <span className="text-ink font-semibold text-[11px] shrink-0 ml-1">({c.org})</span>
-                  </div>
-                  <p className="mt-0.5 pl-3 text-[11px] sm:text-[11.5px] text-ink/85 leading-snug">{c.note}</p>
                 </div>
               ))}
             </div>

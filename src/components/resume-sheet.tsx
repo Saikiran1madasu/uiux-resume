@@ -192,28 +192,10 @@ export function ResumeSheet() {
               </div>
             </section>
 
-            {/* Education & Certifications */}
+            {/* Certifications & Education */}
             <section>
-              <SectionLabel>Education & Certifications</SectionLabel>
+              <SectionLabel>Certifications & Education</SectionLabel>
               <div className="space-y-3">
-                {/* Education Cards */}
-                <div className="grid gap-2.5 sm:grid-cols-2">
-                  {resume.education.map((ed) => (
-                    <div
-                      key={ed.school}
-                      className="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-2.5 sm:p-3"
-                    >
-                      <div>
-                        <div className="flex items-baseline justify-between gap-2">
-                          <p className="text-[12.5px] sm:text-[13px] font-bold text-ink">{ed.school}</p>
-                          <span className="text-[11px] font-semibold text-muted">{ed.dates}</span>
-                        </div>
-                        <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-accent font-semibold">{ed.credential}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
                 {/* Certifications: 2-column Grid */}
                 <div className="grid gap-2.5 sm:grid-cols-2">
                   {resume.certifications.map((c) => (
@@ -229,6 +211,24 @@ export function ResumeSheet() {
                           </span>
                         </div>
                         <p className="mt-1 text-[11px] sm:text-[11.5px] text-ink-soft leading-snug">{c.note}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Education Cards */}
+                <div className="grid gap-2.5 sm:grid-cols-2">
+                  {resume.education.map((ed) => (
+                    <div
+                      key={ed.school}
+                      className="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-2.5 sm:p-3"
+                    >
+                      <div>
+                        <div className="flex items-baseline justify-between gap-2">
+                          <p className="text-[12.5px] sm:text-[13px] font-bold text-ink">{ed.school}</p>
+                          <span className="text-[11px] font-semibold text-muted">{ed.dates}</span>
+                        </div>
+                        <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-accent font-semibold">{ed.credential}</p>
                       </div>
                     </div>
                   ))}
