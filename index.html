@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madasu Sai Kiran — UX/UI Designer Resume</title>
+  <meta name="description" content="Print-ready Designed and ATS resume for Madasu Sai Kiran, UX/UI designer specializing in fintech and marketing platforms." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1A2332',
+            'ink-soft': '#334155',
+            accent: '#0D766E',
+            'accent-deep': '#0F5B55',
+            rule: '#D6D3CD',
+            cream: '#FAF8F5',
+            paper: '#F1EFEA',
+            'paper-deep': '#E7E4DC',
+            muted: '#64748B',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+            ats: ['Arial', 'Helvetica', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+      body {
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #1a2332 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 210mm !important;
+        min-height: 297mm !important;
+        height: auto !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        padding: 6mm 10mm !important;
+      }
+    }
+    .resume-sheet {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="bg-[#F1EFEA] font-sans antialiased text-ink">
+
+  <!-- Top Navigation Bar -->
+  <div class="no-print border-b border-rule bg-[#FAF8F5]/90 sticky top-0 z-50 backdrop-blur-sm shadow-sm">
+    <div class="mx-auto max-w-4xl px-4 py-4 sm:px-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Two versions · same content</p>
+          <h1 class="text-xl sm:text-2xl font-bold font-display text-ink">Madasu Sai Kiran — Resume Pack</h1>
+        </div>
+        
+        <!-- Controls & Actions -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="window.print()" class="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow hover:bg-accent-deep transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9h6V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4z"></path></svg>
+            Print / Save as PDF
+          </button>
+          <button onclick="copyEmail()" id="emailBtn" class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium hover:border-accent transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span id="emailText">Copy email</span>
+          </button>
+          <a href="https://saikiran1madasu.github.io/portfolio/" target="_blank" class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium hover:border-accent transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            Portfolio
+          </a>
+        </div>
+      </div>
+
+      <!-- Version Cards Toggle -->
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <div id="cardDesigned" onclick="switchView('designed')" class="cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream">
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-bold flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+              Type 1 · Designed Resume
+            </p>
+            <span id="badgeDesigned" class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-accent text-white">Active</span>
+          </div>
+          <p id="descDesigned" class="mt-1 text-xs text-paper-deep">Cream aesthetic, single-row layout with equal spacing. For portfolio, email & interviews.</p>
+        </div>
+
+        <div id="cardAts" onclick="switchView('ats')" class="cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink">
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-bold flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+              Type 2 · ATS Resume
+            </p>
+            <span id="badgeAts" class="hidden text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-accent text-white">Active</span>
+          </div>
+          <p id="descAts" class="mt-1 text-xs text-muted">Clean single-column Arial format. 100% optimized for Job Portals (Naukri, LinkedIn, Greenhouse).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main View Container -->
+  <main class="px-3 py-6 sm:px-6 sm:py-8 flex justify-center">
+
+    <!-- TYPE 1: DESIGNED RESUME -->
+    <article id="viewDesigned" class="resume-sheet bg-[#FAF8F5] px-6 py-5 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-8 sm:py-6">
+      <!-- Header -->
+      <header class="border-b border-rule pb-2.5">
+        <p class="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-accent">UX / UI Designer</p>
+        <h1 class="mt-0.5 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Madasu Sai Kiran</h1>
+        <div class="mt-2 flex flex-wrap items-center justify-between gap-y-1 gap-x-3 border-t border-rule/50 pt-2 font-sans text-xs text-ink-soft">
+          <div><a class="font-medium hover:text-accent transition-colors" href="tel:+917981231628">+91 79812 31628</a></div>
+          <span class="hidden text-rule sm:inline">·</span>
+          <div><a class="break-all font-medium hover:text-accent transition-colors" href="mailto:Saikiran123.madasu@gmail.com">Saikiran123.madasu@gmail.com</a></div>
+          <span class="hidden text-rule sm:inline">·</span>
+          <div class="font-medium">Khammam, Telangana</div>
+          <span class="hidden text-rule sm:inline">·</span>
+          <div><a class="break-all font-medium text-accent hover:underline" href="https://saikiran1madasu.github.io/portfolio/" target="_blank">saikiran1madasu.github.io/portfolio</a></div>
+        </div>
+      </header>
+
+      <!-- Main Body -->
+      <div class="mt-3.5 space-y-3">
+        <!-- Profile -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Profile</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <p class="text-xs sm:text-[13px] leading-relaxed text-ink-soft">
+            UX/UI designer with hands-on experience shipping mobile and web interfaces for fintech and marketing platforms. I create clean, intuitive, user-centered work that balances usability with business goals — from research and wireframes through high-fidelity UI and developer handoff.
+          </p>
+        </section>
+
+        <!-- Experience -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Experience</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <div class="space-y-3.5">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                <h3 class="font-display text-base sm:text-lg font-bold text-ink">UX/UI Designer</h3>
+                <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">2024 — Present</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-accent">Intexm Media <span class="text-muted font-normal">· Full-time</span></p>
+              <ul class="mt-1 list-disc space-y-0.5 pl-4 text-xs sm:text-sm leading-snug text-ink-soft">
+                <li>Own the design process for user flows, wireframes, and high-fidelity UI across mobile and web products in fintech and marketing.</li>
+                <li>Design responsive websites, landing pages, and internal admin panels, working with developers and stakeholders to keep implementation accurate and consistent across devices.</li>
+                <li>Create conversion-focused offer and campaign pages aligned with UGC and platform guidelines, with a clear focus on clarity, compliance, and engagement.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                <h3 class="font-display text-base sm:text-lg font-bold text-ink">Independent UX/UI Designer</h3>
+                <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">Ongoing</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-accent">Freelance <span class="text-muted font-normal">· Contract</span></p>
+              <ul class="mt-1 list-disc space-y-0.5 pl-4 text-xs sm:text-sm leading-snug text-ink-soft">
+                <li>Designed UX and UI for one mobile application and designed and developed two responsive websites using modern web builders and AI-assisted tools.</li>
+                <li>Partnered with clients on end-to-end UI/UX — user journeys, flows, high-fidelity interfaces, and timely implementation.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Selected Work & Projects -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Selected Work & Projects</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <div class="grid gap-2.5 sm:grid-cols-3">
+            <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-2.5">
+              <h3 class="font-display text-xs sm:text-sm font-bold text-ink">Mobile application design — 3 apps</h3>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-ink-soft">UX and UI for fintech and reward-based mobile apps: user journeys, flows, high-fidelity interfaces, and design-to-development handoff.</p>
+            </div>
+            <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-2.5">
+              <h3 class="font-display text-xs sm:text-sm font-bold text-ink">Marketing & fintech websites — 7+</h3>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-ink-soft">Responsive sites, landing pages, and conversion-focused experiences across fintech, rewards, and gaming, using modern web builders and AI-assisted tools.</p>
+            </div>
+            <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-2.5">
+              <h3 class="font-display text-xs sm:text-sm font-bold text-ink">User journeys & campaign pages</h3>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-ink-soft">Multiple offer and campaign pages aligned with UGC and platform guidelines, designed for clarity, compliance, and conversion.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Skills</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <div class="grid gap-2 sm:grid-cols-3">
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Research</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>User interviews</li>
+                <li>Competitor analysis</li>
+                <li>Quantitative & qualitative research</li>
+              </ul>
+            </div>
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Strategy</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>Personas</li>
+                <li>Journey maps</li>
+                <li>Affinity & empathy maps</li>
+                <li>Pain points</li>
+              </ul>
+            </div>
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Visual</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>Wireframing</li>
+                <li>Low & high fidelity</li>
+                <li>Prototyping</li>
+                <li>App & web design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Tools & Technologies</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Design</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>Figma (Auto Layout)</li>
+                <li>FigJam</li>
+                <li>Balsamiq</li>
+              </ul>
+            </div>
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Prototyping</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>Adobe XD</li>
+                <li>Framer</li>
+                <li>Zeplin</li>
+              </ul>
+            </div>
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">AI Tools</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>Cursor AI</li>
+                <li>Antigravity</li>
+                <li>Claude</li>
+                <li>ChatGPT</li>
+              </ul>
+            </div>
+            <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
+              <p class="font-bold uppercase tracking-wider text-ink">Frontend</p>
+              <ul class="mt-1 list-disc pl-3.5 space-y-0.5 text-[11px] leading-tight text-ink-soft">
+                <li>HTML5 & CSS3</li>
+                <li>Tailwind CSS</li>
+                <li>Wix Studio</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section>
+          <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            <span>Education & Certifications</span><span class="h-px flex-1 bg-rule/80"></span>
+          </h2>
+          <div class="space-y-2.5">
+            <div class="grid gap-2.5 sm:grid-cols-2">
+              <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/30 p-2 text-xs">
+                <div class="flex items-baseline justify-between gap-2">
+                  <p class="font-bold text-ink">Aditya University</p>
+                  <span class="text-xs font-medium text-muted">2020 — 2023</span>
+                </div>
+                <p class="mt-0.5 text-xs text-ink-soft">B.Tech, Mining Engineering</p>
+              </div>
+              <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/30 p-2 text-xs">
+                <div class="flex items-baseline justify-between gap-2">
+                  <p class="font-bold text-ink">Anurag Engineering College</p>
+                  <span class="text-xs font-medium text-muted">2017 — 2020</span>
+                </div>
+                <p class="mt-0.5 text-xs text-ink-soft">Diploma, Mining Engineering</p>
+              </div>
+            </div>
+
+            <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">Google UX Design</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">Coursera</p>
+              </div>
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">User Experience</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">Accenture</p>
+              </div>
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">Human-Centered Design 201: Prototyping</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
+              </div>
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">Introduction to Human-Centered Design</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
+              </div>
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">Visual Communication</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
+              </div>
+              <div class="rounded border border-rule/70 bg-paper/30 p-1.5 text-xs">
+                <p class="font-semibold text-ink leading-tight">Augmenting Design Thinking with HCI</p>
+                <p class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="flex flex-wrap items-center justify-between gap-2 border-t border-rule/70 pt-2 text-xs text-ink-soft">
+          <span class="font-bold uppercase tracking-wider text-accent">Languages</span>
+          <span class="font-medium text-ink">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</span>
+        </section>
+      </div>
+    </article>
+
+
+    <!-- TYPE 2: ATS RESUME -->
+    <article id="viewAts" class="hidden resume-sheet bg-white px-8 py-8 sm:px-10 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)] font-ats">
+      <!-- Header -->
+      <header class="text-left border-b-2 border-ink pb-2.5">
+        <h1 class="font-ats text-2xl font-bold uppercase tracking-tight text-ink">Madasu Sai Kiran</h1>
+        <p class="font-ats text-sm font-bold text-ink mt-0.5">UX / UI Designer</p>
+        <p class="mt-1.5 font-ats text-xs leading-normal text-ink">
+          +91 79812 31628 &nbsp;|&nbsp; Saikiran123.madasu@gmail.com &nbsp;|&nbsp; Khammam, Telangana
+        </p>
+        <p class="mt-0.5 font-ats text-xs text-ink">
+          <a href="https://saikiran1madasu.github.io/portfolio/" target="_blank" class="underline font-medium">https://saikiran1madasu.github.io/portfolio/</a>
+        </p>
+      </header>
+
+      <!-- Professional Summary -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Professional Summary</h2>
+        <p class="font-ats text-[13px] leading-relaxed text-ink">
+          UX/UI designer with hands-on experience shipping mobile and web interfaces for fintech and marketing platforms. I create clean, intuitive, user-centered work that balances usability with business goals — from research and wireframes through high-fidelity UI and developer handoff.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Experience</h2>
+        <div class="space-y-2.5">
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between">
+              <p class="font-ats text-[13.5px] font-bold text-ink">UX/UI Designer</p>
+              <span class="font-ats text-xs font-semibold text-ink">2024 - Present</span>
+            </div>
+            <p class="font-ats text-xs font-semibold text-ink">Intexm Media &nbsp;|&nbsp; Full-time</p>
+            <ul class="mt-1 list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-0.5">
+              <li>Own the design process for user flows, wireframes, and high-fidelity UI across mobile and web products in fintech and marketing.</li>
+              <li>Design responsive websites, landing pages, and internal admin panels, working with developers and stakeholders to keep implementation accurate and consistent across devices.</li>
+              <li>Create conversion-focused offer and campaign pages aligned with UGC and platform guidelines, with a clear focus on clarity, compliance, and engagement.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between">
+              <p class="font-ats text-[13.5px] font-bold text-ink">Independent UX/UI Designer</p>
+              <span class="font-ats text-xs font-semibold text-ink">Ongoing</span>
+            </div>
+            <p class="font-ats text-xs font-semibold text-ink">Freelance &nbsp;|&nbsp; Contract</p>
+            <ul class="mt-1 list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-0.5">
+              <li>Designed UX and UI for one mobile application and designed and developed two responsive websites using modern web builders and AI-assisted tools.</li>
+              <li>Partnered with clients on end-to-end UI/UX — user journeys, flows, high-fidelity interfaces, and timely implementation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Projects -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Key Projects & Case Studies</h2>
+        <div class="space-y-1.5">
+          <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+            <span class="font-bold">Mobile application design — 3 apps: </span>
+            <span>UX and UI for fintech and reward-based mobile apps: user journeys, flows, high-fidelity interfaces, and design-to-development handoff.</span>
+          </div>
+          <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+            <span class="font-bold">Marketing & fintech websites — 7+: </span>
+            <span>Responsive sites, landing pages, and conversion-focused experiences across fintech, rewards, and gaming, using modern web builders and AI-assisted tools.</span>
+          </div>
+          <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+            <span class="font-bold">User journeys & campaign pages: </span>
+            <span>Multiple offer and campaign pages aligned with UGC and platform guidelines, designed for clarity, compliance, and conversion.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Technologies -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Tools & Technologies</h2>
+        <ul class="list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1">
+          <li><span class="font-bold">Core Skills: </span>User interviews, Competitor analysis, Quantitative & qualitative research, Personas, Journey maps, Affinity & empathy maps, Pain points, Wireframing, Low & high fidelity, Prototyping, App & web design, Design systems, Responsive UI, Fintech</li>
+          <li><span class="font-bold">UI/UX Design: </span>Figma (Auto Layout, Components), FigJam, Balsamiq</li>
+          <li><span class="font-bold">Prototyping & Handoff: </span>Adobe XD, Framer, Zeplin</li>
+          <li><span class="font-bold">AI Tools & Workflow: </span>Cursor AI, Antigravity, Claude, ChatGPT</li>
+          <li><span class="font-bold">Frontend & Web Builders: </span>HTML5 & CSS3, Tailwind CSS, Wix Studio</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Education</h2>
+        <div class="space-y-1 font-ats text-[12.5px] leading-snug text-ink">
+          <div class="flex flex-wrap justify-between items-baseline">
+            <span><span class="font-bold">B.Tech, Mining Engineering</span> &nbsp;—&nbsp; Aditya University</span>
+            <span class="font-semibold text-xs">2020 - 2023</span>
+          </div>
+          <div class="flex flex-wrap justify-between items-baseline">
+            <span><span class="font-bold">Diploma, Mining Engineering</span> &nbsp;—&nbsp; Anurag Engineering College</span>
+            <span class="font-semibold text-xs">2017 - 2020</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Certifications</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 font-ats text-[12.5px] text-ink">
+          <div class="flex items-baseline justify-between"><span>• Google UX Design</span><span class="text-muted text-xs shrink-0 ml-1">(Coursera)</span></div>
+          <div class="flex items-baseline justify-between"><span>• User Experience</span><span class="text-muted text-xs shrink-0 ml-1">(Accenture)</span></div>
+          <div class="flex items-baseline justify-between"><span>• Human-Centered Design 201: Prototyping</span><span class="text-muted text-xs shrink-0 ml-1">(Acumen Academy)</span></div>
+          <div class="flex items-baseline justify-between"><span>• Introduction to Human-Centered Design</span><span class="text-muted text-xs shrink-0 ml-1">(Acumen Academy)</span></div>
+          <div class="flex items-baseline justify-between"><span>• Visual Communication</span><span class="text-muted text-xs shrink-0 ml-1">(NPTEL (Swayam))</span></div>
+          <div class="flex items-baseline justify-between"><span>• Augmenting Design Thinking with HCI</span><span class="text-muted text-xs shrink-0 ml-1">(NPTEL (Swayam))</span></div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="mt-3.5">
+        <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Languages</h2>
+        <p class="font-ats text-[12.5px] text-ink">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</p>
+      </section>
+    </article>
+
+  </main>
+
+  <script>
+    function switchView(type) {
+      const vDesigned = document.getElementById('viewDesigned');
+      const vAts = document.getElementById('viewAts');
+      const cDesigned = document.getElementById('cardDesigned');
+      const cAts = document.getElementById('cardAts');
+      const bDesigned = document.getElementById('badgeDesigned');
+      const bAts = document.getElementById('badgeAts');
+      const dDesigned = document.getElementById('descDesigned');
+      const dAts = document.getElementById('descAts');
+
+      if (type === 'designed') {
+        vDesigned.classList.remove('hidden');
+        vAts.classList.add('hidden');
+
+        cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream';
+        cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink';
+
+        bDesigned.classList.remove('hidden');
+        bAts.classList.add('hidden');
+
+        dDesigned.className = 'mt-1 text-xs text-paper-deep';
+        dAts.className = 'mt-1 text-xs text-muted';
+      } else {
+        vDesigned.classList.add('hidden');
+        vAts.classList.remove('hidden');
+
+        cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream';
+        cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink';
+
+        bAts.classList.remove('hidden');
+        bDesigned.classList.add('hidden');
+
+        dAts.className = 'mt-1 text-xs text-paper-deep';
+        dDesigned.className = 'mt-1 text-xs text-muted';
+      }
+    }
+
+    async function copyEmail() {
+      try {
+        await navigator.clipboard.writeText('Saikiran123.madasu@gmail.com');
+        const text = document.getElementById('emailText');
+        text.innerText = 'Copied!';
+        setTimeout(() => { text.innerText = 'Copy email'; }, 2000);
+      } catch (err) {
+        window.location.href = 'mailto:Saikiran123.madasu@gmail.com';
+      }
+    }
+  </script>
+</body>
+</html>
