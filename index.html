@@ -64,7 +64,7 @@
         width: 210mm !important;
         height: 297mm !important;
         max-height: 297mm !important;
-        padding: 12mm 14mm !important;
+        padding: 13mm 15mm !important;
         box-sizing: border-box !important;
         page-break-after: always !important;
         break-after: page !important;
@@ -138,16 +138,16 @@
   <main class="px-3 py-6 sm:px-6 sm:py-8 flex justify-center">
 
     <!-- TYPE 1: DESIGNED RESUME (2 PAGES) -->
-    <div id="viewDesigned" class="space-y-8 print:space-y-0 w-full max-w-[210mm]">
+    <div id="viewDesigned" class="space-y-8 sm:space-y-10 print:space-y-0 w-full max-w-[210mm]">
       
       <!-- PAGE 1 -->
-      <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-6 py-6 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-9 sm:py-8">
+      <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-7 py-7 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-10 sm:py-9">
         <div>
           <!-- Header -->
-          <header class="border-b border-rule pb-3">
-            <p class="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-accent">UX / UI Designer</p>
-            <h1 class="mt-1 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Madasu Sai Kiran</h1>
-            <div class="mt-2.5 flex flex-wrap items-center justify-between gap-y-1 gap-x-3 border-t border-rule/50 pt-2 font-sans text-xs text-ink-soft">
+          <header class="border-b border-rule pb-4">
+            <p class="font-sans text-xs font-bold uppercase tracking-[0.28em] text-accent">UX / UI Designer</p>
+            <h1 class="mt-1 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">Madasu Sai Kiran</h1>
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-y-1.5 gap-x-4 border-t border-rule/50 pt-2.5 font-sans text-xs sm:text-[13px] text-ink-soft">
               <div><a class="font-medium hover:text-accent transition-colors" href="tel:+917981231628">+91 79812 31628</a></div>
               <span class="hidden text-rule sm:inline">·</span>
               <div><a class="break-all font-medium hover:text-accent transition-colors" href="mailto:Saikiran123.madasu@gmail.com">Saikiran123.madasu@gmail.com</a></div>
@@ -158,276 +158,282 @@
             </div>
           </header>
 
-          <!-- Profile -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Profile</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <p class="text-xs sm:text-[13px] leading-relaxed text-ink-soft">
-              UX/UI Designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech and marketing. Specializes in User Research, Information Architecture, Low/High-Fidelity UI Design, and Design Systems in Figma. Proven track record collaborating cross-functionally with engineers to deliver accessible, conversion-focused digital experiences.
-            </p>
-          </section>
+          <!-- Page 1 Sections -->
+          <div class="mt-6 space-y-6 sm:space-y-7">
+            <!-- Profile -->
+            <section>
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Profile</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <p class="text-[13.5px] sm:text-sm leading-relaxed text-ink-soft">
+                UX/UI Designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech and marketing. Specializes in User Research, Information Architecture, Low/High-Fidelity UI Design, and Design Systems in Figma. Proven track record collaborating cross-functionally with engineers to deliver accessible, conversion-focused digital experiences.
+              </p>
+            </section>
 
-          <!-- Experience -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Experience</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <div class="space-y-4">
-              <div>
-                <div class="flex flex-wrap items-baseline justify-between gap-x-3">
-                  <h3 class="font-display text-base sm:text-lg font-bold text-ink">UX/UI Designer</h3>
-                  <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">2024 — Present</span>
+            <!-- Experience -->
+            <section>
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Experience</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <div class="space-y-5">
+                <div>
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                    <h3 class="font-display text-base sm:text-lg font-bold text-ink">UX/UI Designer</h3>
+                    <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">2024 — Present</span>
+                  </div>
+                  <p class="mt-0.5 text-xs sm:text-sm font-semibold text-accent">Intexm Media <span class="text-muted font-normal">· Full-time</span></p>
+                  <ul class="mt-2 list-disc space-y-1.5 pl-5 text-[13px] sm:text-[13.5px] leading-relaxed text-ink-soft">
+                    <li>Spearheaded UX/UI design for 7+ responsive web platforms and 3 mobile apps in fintech and marketing, driving a 22% increase in user conversion.</li>
+                    <li>Conducted user research, usability testing, and journey mapping to refine information architecture and streamline onboarding user flows.</li>
+                    <li>Built scalable design systems and component libraries in Figma with Auto Layout and tokens, reducing developer handoff time by 30%.</li>
+                    <li>Designed high-converting campaign landing pages compliant with accessibility standards, boosting click-through rates and user engagement.</li>
+                  </ul>
                 </div>
-                <p class="text-xs sm:text-sm font-semibold text-accent">Intexm Media <span class="text-muted font-normal">· Full-time</span></p>
-                <ul class="mt-1.5 list-disc space-y-1 pl-4 text-xs sm:text-sm leading-relaxed text-ink-soft">
-                  <li>Spearheaded UX/UI design for 7+ responsive web platforms and 3 mobile apps in fintech and marketing, driving a 22% increase in user conversion.</li>
-                  <li>Conducted user research, usability testing, and journey mapping to refine information architecture and streamline onboarding user flows.</li>
-                  <li>Built scalable design systems and component libraries in Figma with Auto Layout and tokens, reducing developer handoff time by 30%.</li>
-                  <li>Designed high-converting campaign landing pages compliant with accessibility standards, boosting click-through rates and user engagement.</li>
-                </ul>
-              </div>
 
-              <div>
-                <div class="flex flex-wrap items-baseline justify-between gap-x-3">
-                  <h3 class="font-display text-base sm:text-lg font-bold text-ink">Independent UX/UI Designer</h3>
-                  <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">Ongoing</span>
+                <div>
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                    <h3 class="font-display text-base sm:text-lg font-bold text-ink">Independent UX/UI Designer</h3>
+                    <span class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">Ongoing</span>
+                  </div>
+                  <p class="mt-0.5 text-xs sm:text-sm font-semibold text-accent">Freelance <span class="text-muted font-normal">· Contract</span></p>
+                  <ul class="mt-2 list-disc space-y-1.5 pl-5 text-[13px] sm:text-[13.5px] leading-relaxed text-ink-soft">
+                    <li>Delivered end-to-end product design for 1 mobile application and 2 responsive web projects from user flows to high-fidelity interactive prototypes.</li>
+                    <li>Conducted user testing and heuristic evaluations, identifying usability bottlenecks and improving task completion speed by 25%.</li>
+                  </ul>
                 </div>
-                <p class="text-xs sm:text-sm font-semibold text-accent">Freelance <span class="text-muted font-normal">· Contract</span></p>
-                <ul class="mt-1.5 list-disc space-y-1 pl-4 text-xs sm:text-sm leading-relaxed text-ink-soft">
-                  <li>Delivered end-to-end product design for 1 mobile application and 2 responsive web projects from user flows to high-fidelity interactive prototypes.</li>
-                  <li>Conducted user testing and heuristic evaluations, identifying usability bottlenecks and improving task completion speed by 25%.</li>
-                </ul>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <!-- Selected Work & Projects -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Selected Work & Projects</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <div class="grid gap-3 sm:grid-cols-3">
-              <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-3">
-                <h3 class="font-display text-sm font-bold text-ink">Mobile application design — 3 apps</h3>
-                <p class="mt-1.5 text-xs leading-relaxed text-ink-soft">End-to-end UX/UI for fintech and reward-based mobile apps: user research, user flows, interactive prototyping, and developer handoff.</p>
+            <!-- Selected Work & Projects -->
+            <section>
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Selected Work & Projects</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <div class="grid gap-3.5 sm:grid-cols-3">
+                <div class="flex flex-col justify-between rounded border border-rule/80 bg-paper/50 p-3.5 sm:p-4">
+                  <h3 class="font-display text-sm font-bold text-ink">Mobile application design — 3 apps</h3>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-soft">End-to-end UX/UI for fintech and reward-based mobile apps: user research, user flows, interactive prototyping, and developer handoff.</p>
+                </div>
+                <div class="flex flex-col justify-between rounded border border-rule/80 bg-paper/50 p-3.5 sm:p-4">
+                  <h3 class="font-display text-sm font-bold text-ink">Marketing & fintech websites — 7+</h3>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-soft">Responsive platforms, landing pages, and conversion-focused experiences across fintech and gaming, built with modern design systems and AI tools.</p>
+                </div>
+                <div class="flex flex-col justify-between rounded border border-rule/80 bg-paper/50 p-3.5 sm:p-4">
+                  <h3 class="font-display text-sm font-bold text-ink">User journeys & campaign pages</h3>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-soft">High-conversion campaign and offer experiences designed for clarity, WCAG accessibility, compliance, and maximum user engagement.</p>
+                </div>
               </div>
-              <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-3">
-                <h3 class="font-display text-sm font-bold text-ink">Marketing & fintech websites — 7+</h3>
-                <p class="mt-1.5 text-xs leading-relaxed text-ink-soft">Responsive platforms, landing pages, and conversion-focused experiences across fintech and gaming, built with modern design systems and AI tools.</p>
-              </div>
-              <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/40 p-3">
-                <h3 class="font-display text-sm font-bold text-ink">User journeys & campaign pages</h3>
-                <p class="mt-1.5 text-xs leading-relaxed text-ink-soft">High-conversion campaign and offer experiences designed for clarity, WCAG accessibility, compliance, and maximum user engagement.</p>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
 
         <!-- Page 1 Footer -->
-        <footer class="mt-4 flex items-center justify-between border-t border-rule/60 pt-2 text-[11px] text-muted">
-          <span>Madasu Sai Kiran — UX/UI Designer</span>
-          <span class="font-medium">Page 1 of 2</span>
+        <footer class="mt-6 flex items-center justify-between border-t border-rule/70 pt-3 text-xs text-muted">
+          <span class="font-medium text-ink-soft">Madasu Sai Kiran — UX/UI Designer</span>
+          <span class="font-semibold">Page 1 of 2</span>
         </footer>
       </article>
 
       <!-- PAGE 2 -->
-      <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-6 py-6 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-9 sm:py-8">
+      <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-7 py-7 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-10 sm:py-9">
         <div>
           <!-- Header Sub-bar -->
-          <header class="flex items-baseline justify-between border-b border-rule pb-2.5">
+          <header class="flex items-baseline justify-between border-b border-rule pb-3.5">
             <div>
-              <h2 class="font-display text-lg font-bold text-ink">Madasu Sai Kiran</h2>
-              <p class="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">UX / UI Designer · Technical Profile</p>
+              <h2 class="font-display text-xl font-bold text-ink">Madasu Sai Kiran</h2>
+              <p class="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-accent">UX / UI Designer · Technical Profile & Credentials</p>
             </div>
             <div class="text-right text-xs text-ink-soft">
               <a href="https://saikiran1madasu.github.io/portfolio/" target="_blank" rel="noreferrer" class="text-accent font-medium hover:underline">saikiran1madasu.github.io/portfolio</a>
             </div>
           </header>
 
-          <!-- Skills -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Core Design Skills</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <div class="grid gap-2.5 sm:grid-cols-3">
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Research</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>User Interviews</li>
-                  <li>Usability Testing</li>
-                  <li>Competitor Analysis</li>
-                  <li>Qualitative & Quantitative</li>
-                </ul>
+          <!-- Page 2 Sections -->
+          <div className="mt-6 space-y-6 sm:space-y-7">
+            <!-- Skills -->
+            <section>
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Core Design Skills</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 sm:p-4 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Research</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12.5px] leading-snug text-ink-soft">
+                    <li>User Interviews</li>
+                    <li>Usability Testing</li>
+                    <li>Competitor Analysis</li>
+                    <li>Qualitative & Quantitative</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 sm:p-4 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Strategy</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12.5px] leading-snug text-ink-soft">
+                    <li>Information Architecture</li>
+                    <li>User Journey Mapping</li>
+                    <li>User Flows & Wireflows</li>
+                    <li>Personas & Empathy Maps</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 sm:p-4 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Visual</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12.5px] leading-snug text-ink-soft">
+                    <li>Low-Fidelity Wireframing</li>
+                    <li>High-Fidelity UI Design</li>
+                    <li>Interactive Prototyping</li>
+                    <li>Design Systems & Tokens</li>
+                  </ul>
+                </div>
               </div>
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Strategy</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>Information Architecture</li>
-                  <li>User Journey Mapping</li>
-                  <li>User Flows & Wireflows</li>
-                  <li>Personas & Empathy Maps</li>
-                </ul>
-              </div>
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Visual</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>Low-Fidelity Wireframing</li>
-                  <li>High-Fidelity UI Design</li>
-                  <li>Interactive Prototyping</li>
-                  <li>Design Systems & Tokens</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <!-- Tools & Technologies -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Tools & Technologies</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <div class="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Design</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>Figma (Auto Layout)</li>
-                  <li>FigJam</li>
-                  <li>Balsamiq</li>
-                </ul>
+            <!-- Tools & Technologies -->
+            <section class="mt-6">
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Tools & Technologies</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Design</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12px] leading-snug text-ink-soft">
+                    <li>Figma (Auto Layout)</li>
+                    <li>FigJam</li>
+                    <li>Balsamiq</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Prototyping</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12px] leading-snug text-ink-soft">
+                    <li>Adobe XD</li>
+                    <li>Framer</li>
+                    <li>Zeplin</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">AI Tools</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12px] leading-snug text-ink-soft">
+                    <li>Cursor AI</li>
+                    <li>Antigravity</li>
+                    <li>Claude</li>
+                    <li>ChatGPT</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-rule/80 bg-paper/40 p-3.5 text-xs">
+                  <p class="font-bold uppercase tracking-wider text-ink text-xs">Frontend</p>
+                  <ul class="mt-2 list-disc pl-4 space-y-1.5 text-xs sm:text-[12px] leading-snug text-ink-soft">
+                    <li>HTML5 & CSS3</li>
+                    <li>Tailwind CSS</li>
+                    <li>Wix Studio</li>
+                  </ul>
+                </div>
               </div>
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Prototyping</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>Adobe XD</li>
-                  <li>Framer</li>
-                  <li>Zeplin</li>
-                </ul>
-              </div>
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">AI Tools</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>Cursor AI</li>
-                  <li>Antigravity</li>
-                  <li>Claude</li>
-                  <li>ChatGPT</li>
-                </ul>
-              </div>
-              <div class="rounded border border-rule/70 bg-paper/30 p-3 text-xs">
-                <p class="font-bold uppercase tracking-wider text-ink">Frontend</p>
-                <ul class="mt-1.5 list-disc pl-3.5 space-y-1 text-[11.5px] leading-snug text-ink-soft">
-                  <li>HTML5 & CSS3</li>
-                  <li>Tailwind CSS</li>
-                  <li>Wix Studio</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <!-- Education & Certifications -->
-          <section class="mt-4">
-            <h2 class="mb-2 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">
-              <span>Education & Certifications</span><span class="h-px flex-1 bg-rule/80"></span>
-            </h2>
-            <div class="space-y-3">
-              <div class="grid gap-3 sm:grid-cols-2">
-                <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/30 p-3">
-                  <div class="flex items-baseline justify-between gap-2">
-                    <p className="text-xs sm:text-sm font-bold text-ink">Aditya University</p>
-                    <span class="text-xs font-medium text-muted">2020 — 2023</span>
+            <!-- Education & Certifications -->
+            <section class="mt-6">
+              <h2 class="mb-3 flex items-center gap-3 font-sans text-xs font-bold uppercase tracking-[0.22em] text-accent">
+                <span>Education & Certifications</span><span class="h-px flex-1 bg-rule/80"></span>
+              </h2>
+              <div class="space-y-4">
+                <div class="grid gap-3.5 sm:grid-cols-2">
+                  <div class="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-3.5">
+                    <div class="flex items-baseline justify-between gap-2">
+                      <p class="text-xs sm:text-sm font-bold text-ink">Aditya University</p>
+                      <span class="text-xs font-medium text-muted">2020 — 2023</span>
+                    </div>
+                    <p class="mt-1 text-xs text-ink-soft font-medium">B.Tech, Mining Engineering</p>
                   </div>
-                  <p class="mt-0.5 text-xs text-ink-soft">B.Tech, Mining Engineering</p>
-                </div>
-                <div class="flex flex-col justify-between rounded border border-rule/70 bg-paper/30 p-3">
-                  <div class="flex items-baseline justify-between gap-2">
-                    <p class="text-xs sm:text-sm font-bold text-ink">Anurag Engineering College</p>
-                    <span class="text-xs font-medium text-muted">2017 — 2020</span>
+                  <div class="flex flex-col justify-between rounded border border-rule/80 bg-paper/40 p-3.5">
+                    <div class="flex items-baseline justify-between gap-2">
+                      <p class="text-xs sm:text-sm font-bold text-ink">Anurag Engineering College</p>
+                      <span class="text-xs font-medium text-muted">2017 — 2020</span>
+                    </div>
+                    <p class="mt-1 text-xs text-ink-soft font-medium">Diploma, Mining Engineering</p>
                   </div>
-                  <p class="mt-0.5 text-xs text-ink-soft">Diploma, Mining Engineering</p>
+                </div>
+
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">Google UX Design</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">Coursera</p>
+                  </div>
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">User Experience</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">Accenture</p>
+                  </div>
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">Human-Centered Design 201: Prototyping</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
+                  </div>
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">Introduction to Human-Centered Design</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
+                  </div>
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">Visual Communication</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
+                  </div>
+                  <div class="rounded border border-rule/80 bg-paper/40 p-3 text-xs">
+                    <p class="font-semibold text-ink leading-snug">Augmenting Design Thinking with HCI</p>
+                    <p class="mt-1.5 text-[10.5px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
+                  </div>
                 </div>
               </div>
+            </section>
 
-              <div class="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">Google UX Design</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">Coursera</p>
-                </div>
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">User Experience</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">Accenture</p>
-                </div>
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">Human-Centered Design 201: Prototyping</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
-                </div>
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">Introduction to Human-Centered Design</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">Acumen Academy</p>
-                </div>
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">Visual Communication</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
-                </div>
-                <div class="rounded border border-rule/70 bg-paper/30 p-2.5 text-xs">
-                  <p class="font-semibold text-ink leading-tight">Augmenting Design Thinking with HCI</p>
-                  <p class="mt-1 text-[10px] font-medium uppercase tracking-wider text-accent">NPTEL (Swayam)</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Languages -->
-          <section class="flex flex-wrap items-center justify-between gap-2 border-t border-rule/70 pt-3 text-xs text-ink-soft">
-            <span class="font-bold uppercase tracking-wider text-accent">Languages</span>
-            <span class="font-medium text-ink">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</span>
-          </section>
+            <!-- Languages -->
+            <section class="flex flex-wrap items-center justify-between gap-2 border-t border-rule/80 pt-3.5 text-xs text-ink-soft">
+              <span class="font-bold uppercase tracking-wider text-accent">Languages</span>
+              <span class="font-medium text-ink text-[13px]">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</span>
+            </section>
+          </div>
         </div>
 
         <!-- Page 2 Footer -->
-        <footer class="mt-4 flex items-center justify-between border-t border-rule/60 pt-2 text-[11px] text-muted">
-          <span>Saikiran123.madasu@gmail.com · +91 79812 31628</span>
-          <span class="font-medium">Page 2 of 2</span>
+        <footer class="mt-6 flex items-center justify-between border-t border-rule/70 pt-3 text-xs text-muted">
+          <span class="font-medium text-ink-soft">Saikiran123.madasu@gmail.com · +91 79812 31628</span>
+          <span class="font-semibold">Page 2 of 2</span>
         </footer>
       </article>
     </div>
 
 
     <!-- TYPE 2: ATS RESUME (2 PAGES) -->
-    <div id="viewAts" class="hidden space-y-8 print:space-y-0 w-full max-w-[210mm] font-ats">
+    <div id="viewAts" class="hidden space-y-8 sm:space-y-10 print:space-y-0 w-full max-w-[210mm] font-ats">
       
       <!-- PAGE 1 -->
-      <article class="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-10 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
+      <article class="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-11 sm:py-10 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
         <div>
           <!-- Header -->
-          <header class="text-left border-b-2 border-ink pb-3">
-            <h1 class="font-ats text-2xl sm:text-3xl font-bold uppercase tracking-tight text-ink">Madasu Sai Kiran</h1>
-            <p class="font-ats text-sm sm:text-base font-bold text-ink mt-0.5">UX / UI Designer</p>
-            <p class="mt-2 font-ats text-xs leading-normal text-ink">
+          <header class="text-left border-b-2 border-ink pb-4">
+            <h1 class="font-ats text-3xl sm:text-4xl font-bold uppercase tracking-tight text-ink">Madasu Sai Kiran</h1>
+            <p class="font-ats text-base font-bold text-ink mt-1">UX / UI Designer</p>
+            <p class="mt-2.5 font-ats text-[13px] leading-normal text-ink">
               +91 79812 31628 &nbsp;|&nbsp; Saikiran123.madasu@gmail.com &nbsp;|&nbsp; Khammam, Telangana
             </p>
-            <p class="mt-0.5 font-ats text-xs text-ink">
-              <a href="https://saikiran1madasu.github.io/portfolio/" target="_blank" class="underline font-medium">https://saikiran1madasu.github.io/portfolio/</a>
+            <p class="mt-1 font-ats text-[13px] text-ink">
+              <a href="https://saikiran1madasu.github.io/portfolio/" target="_blank" class="underline font-semibold">https://saikiran1madasu.github.io/portfolio/</a>
             </p>
           </header>
 
           <!-- Professional Summary -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Professional Summary</h2>
-            <p class="font-ats text-[13px] leading-relaxed text-ink">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Professional Summary</h2>
+            <p class="font-ats text-[13.5px] leading-relaxed text-ink">
               UX/UI Designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech and marketing. Specializes in User Research, Information Architecture, Low/High-Fidelity UI Design, and Design Systems in Figma. Proven track record collaborating cross-functionally with engineers to deliver accessible, conversion-focused digital experiences.
             </p>
           </section>
 
           <!-- Experience -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Professional Experience</h2>
-            <div class="space-y-3.5">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Professional Experience</h2>
+            <div class="space-y-5">
               <div>
                 <div class="flex flex-wrap items-baseline justify-between">
-                  <p class="font-ats text-[14px] font-bold text-ink">UX/UI Designer</p>
+                  <p class="font-ats text-[15px] font-bold text-ink">UX/UI Designer</p>
                   <span class="font-ats text-xs font-semibold text-ink">2024 - Present</span>
                 </div>
-                <p class="font-ats text-xs font-semibold text-ink">Intexm Media &nbsp;|&nbsp; Full-time</p>
-                <ul class="mt-1.5 list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1">
+                <p class="font-ats text-[13px] font-semibold text-ink mt-0.5">Intexm Media &nbsp;|&nbsp; Full-time</p>
+                <ul class="mt-2 list-disc pl-5 font-ats text-[13px] leading-relaxed text-ink space-y-1.5">
                   <li>Spearheaded UX/UI design for 7+ responsive web platforms and 3 mobile apps in fintech and marketing, driving a 22% increase in user conversion.</li>
                   <li>Conducted user research, usability testing, and journey mapping to refine information architecture and streamline onboarding user flows.</li>
                   <li>Built scalable design systems and component libraries in Figma with Auto Layout and tokens, reducing developer handoff time by 30%.</li>
@@ -437,11 +443,11 @@
 
               <div>
                 <div class="flex flex-wrap items-baseline justify-between">
-                  <p class="font-ats text-[14px] font-bold text-ink">Independent UX/UI Designer</p>
+                  <p class="font-ats text-[15px] font-bold text-ink">Independent UX/UI Designer</p>
                   <span class="font-ats text-xs font-semibold text-ink">Ongoing</span>
                 </div>
-                <p class="font-ats text-xs font-semibold text-ink">Freelance &nbsp;|&nbsp; Contract</p>
-                <ul class="mt-1.5 list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1">
+                <p class="font-ats text-[13px] font-semibold text-ink mt-0.5">Freelance &nbsp;|&nbsp; Contract</p>
+                <ul class="mt-2 list-disc pl-5 font-ats text-[13px] leading-relaxed text-ink space-y-1.5">
                   <li>Delivered end-to-end product design for 1 mobile application and 2 responsive web projects from user flows to high-fidelity interactive prototypes.</li>
                   <li>Conducted user testing and heuristic evaluations, identifying usability bottlenecks and improving task completion speed by 25%.</li>
                 </ul>
@@ -450,18 +456,18 @@
           </section>
 
           <!-- Selected Projects -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Key Projects & Case Studies</h2>
-            <div class="space-y-2">
-              <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Key Projects & Case Studies</h2>
+            <div class="space-y-3">
+              <div class="font-ats text-[13px] leading-relaxed text-ink">
                 <span class="font-bold">Mobile application design — 3 apps: </span>
                 <span>End-to-end UX/UI for fintech and reward-based mobile apps: user research, user flows, interactive prototyping, and developer handoff.</span>
               </div>
-              <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+              <div class="font-ats text-[13px] leading-relaxed text-ink">
                 <span class="font-bold">Marketing & fintech websites — 7+: </span>
                 <span>Responsive platforms, landing pages, and conversion-focused experiences across fintech and gaming, built with modern design systems and AI tools.</span>
               </div>
-              <div class="font-ats text-[12.5px] leading-relaxed text-ink">
+              <div class="font-ats text-[13px] leading-relaxed text-ink">
                 <span class="font-bold">User journeys & campaign pages: </span>
                 <span>High-conversion campaign and offer experiences designed for clarity, WCAG accessibility, compliance, and maximum user engagement.</span>
               </div>
@@ -470,28 +476,28 @@
         </div>
 
         <!-- Page 1 Footer -->
-        <footer class="mt-4 flex items-center justify-between border-t border-ink/40 pt-2 text-[11px] text-ink">
-          <span>Madasu Sai Kiran — UX/UI Designer</span>
-          <span class="font-semibold">Page 1 of 2</span>
+        <footer class="mt-6 flex items-center justify-between border-t border-ink/40 pt-3 text-xs text-ink">
+          <span>{resume.name} — UX/UI Designer</span>
+          <span class="font-bold">Page 1 of 2</span>
         </footer>
       </article>
 
       <!-- PAGE 2 -->
-      <article class="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-10 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
+      <article class="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-11 sm:py-10 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
         <div>
           <!-- Header Sub-bar -->
-          <header class="text-left border-b-2 border-ink pb-2.5 flex items-baseline justify-between">
+          <header class="text-left border-b-2 border-ink pb-3.5 flex items-baseline justify-between">
             <div>
-              <h2 class="font-ats text-lg font-bold uppercase tracking-tight text-ink">Madasu Sai Kiran</h2>
-              <p class="font-ats text-xs font-semibold text-ink">UX / UI Designer · Technical Profile</p>
+              <h2 class="font-ats text-xl font-bold uppercase tracking-tight text-ink">Madasu Sai Kiran</h2>
+              <p class="font-ats text-xs font-semibold text-ink mt-0.5">UX / UI Designer · Technical Profile & Credentials</p>
             </div>
-            <p class="font-ats text-xs text-ink">Saikiran123.madasu@gmail.com</p>
+            <p class="font-ats text-xs font-medium text-ink">Saikiran123.madasu@gmail.com</p>
           </header>
 
           <!-- Skills & Tools -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Technical & Design Skills</h2>
-            <ul class="list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1.5">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Technical & Design Skills</h2>
+            <ul class="list-disc pl-5 font-ats text-[13px] leading-relaxed text-ink space-y-2">
               <li><span class="font-bold">Core Skills & Methodologies: </span>User Interviews, Usability Testing, Competitor Analysis, Information Architecture, User Journey Mapping, User Flows & Wireflows, Personas, Low-Fidelity Wireframing, High-Fidelity UI Design, Interactive Prototyping, Design Systems & Tokens, Product Design, Interaction Design, Accessibility (WCAG), Responsive Design, Fintech UI</li>
               <li><span class="font-bold">UI/UX Design Tools: </span>Figma (Auto Layout, Components, Tokens), FigJam, Balsamiq</li>
               <li><span class="font-bold">Prototyping & Developer Handoff: </span>Adobe XD, Framer, Zeplin</li>
@@ -501,9 +507,9 @@
           </section>
 
           <!-- Education -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Education</h2>
-            <div class="space-y-2 font-ats text-[12.5px] leading-snug text-ink">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Education</h2>
+            <div class="space-y-3 font-ats text-[13px] leading-snug text-ink">
               <div class="flex flex-wrap justify-between items-baseline">
                 <span><span class="font-bold">B.Tech, Mining Engineering</span> &nbsp;—&nbsp; Aditya University</span>
                 <span class="font-semibold text-xs">2020 - 2023</span>
@@ -516,9 +522,9 @@
           </section>
 
           <!-- Certifications -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Certifications & Credentials</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 font-ats text-[12.5px] text-ink">
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Certifications & Credentials</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 font-ats text-[13px] text-ink">
               <div class="flex items-baseline justify-between"><span>• Google UX Design</span><span class="text-ink font-semibold text-xs shrink-0 ml-1">(Coursera)</span></div>
               <div class="flex items-baseline justify-between"><span>• User Experience</span><span class="text-ink font-semibold text-xs shrink-0 ml-1">(Accenture)</span></div>
               <div class="flex items-baseline justify-between"><span>• Human-Centered Design 201: Prototyping</span><span class="text-ink font-semibold text-xs shrink-0 ml-1">(Acumen Academy)</span></div>
@@ -529,16 +535,16 @@
           </section>
 
           <!-- Languages -->
-          <section class="mt-4">
-            <h2 class="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">Languages</h2>
-            <p class="font-ats text-[12.5px] text-ink">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</p>
+          <section class="mt-6">
+            <h2 class="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">Languages</h2>
+            <p class="font-ats text-[13px] text-ink">English &nbsp;·&nbsp; Telugu &nbsp;·&nbsp; Hindi</p>
           </section>
         </div>
 
         <!-- Page 2 Footer -->
-        <footer class="mt-4 flex items-center justify-between border-t border-ink/40 pt-2 text-[11px] text-ink">
+        <footer class="mt-6 flex items-center justify-between border-t border-ink/40 pt-3 text-xs text-ink">
           <span>Saikiran123.madasu@gmail.com &nbsp;|&nbsp; +91 79812 31628</span>
-          <span class="font-semibold">Page 2 of 2</span>
+          <span class="font-bold">Page 2 of 2</span>
         </footer>
       </article>
     </div>

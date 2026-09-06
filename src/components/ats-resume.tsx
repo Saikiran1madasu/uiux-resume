@@ -2,7 +2,7 @@ import { resume } from "@/data/resume";
 
 function Heading({ children }: { children: string }) {
   return (
-    <h2 className="mb-1.5 border-b border-ink font-ats text-[13px] font-bold uppercase tracking-wider text-ink">
+    <h2 className="mb-2 border-b-2 border-ink font-ats text-[13.5px] font-bold uppercase tracking-wider text-ink pb-0.5">
       {children}
     </h2>
   );
@@ -20,44 +20,44 @@ export function AtsResume() {
   ].filter((v, i, a) => a.indexOf(v) === i);
 
   return (
-    <div className="space-y-6 sm:space-y-8 print:space-y-0 font-ats">
+    <div className="space-y-8 sm:space-y-10 print:space-y-0 font-ats">
       {/* PAGE 1 */}
-      <article className="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-10 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
+      <article className="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-11 sm:py-10 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
         <div>
           {/* Header */}
-          <header className="text-left border-b-2 border-ink pb-3">
-            <h1 className="font-ats text-2xl sm:text-3xl font-bold uppercase tracking-tight text-ink">{resume.name}</h1>
-            <p className="font-ats text-sm sm:text-base font-bold text-ink mt-0.5">{resume.role}</p>
-            <p className="mt-2 font-ats text-xs leading-normal text-ink">
+          <header className="text-left border-b-2 border-ink pb-4">
+            <h1 className="font-ats text-3xl sm:text-4xl font-bold uppercase tracking-tight text-ink">{resume.name}</h1>
+            <p className="font-ats text-base font-bold text-ink mt-1">{resume.role}</p>
+            <p className="mt-2.5 font-ats text-[13px] leading-normal text-ink">
               {resume.phone} &nbsp;|&nbsp; {resume.email} &nbsp;|&nbsp; {resume.location}
             </p>
-            <p className="mt-0.5 font-ats text-xs text-ink">
-              <a href={resume.portfolio} target="_blank" rel="noreferrer" className="underline font-medium">
+            <p className="mt-1 font-ats text-[13px] text-ink">
+              <a href={resume.portfolio} target="_blank" rel="noreferrer" className="underline font-semibold">
                 {resume.portfolio}
               </a>
             </p>
           </header>
 
           {/* Professional Summary */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Professional Summary</Heading>
-            <p className="font-ats text-[13px] leading-relaxed text-ink">{resume.summary}</p>
+            <p className="font-ats text-[13.5px] leading-relaxed text-ink">{resume.summary}</p>
           </section>
 
           {/* Experience */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Professional Experience</Heading>
-            <div className="space-y-3.5">
+            <div className="space-y-5">
               {resume.experience.map((job) => (
                 <div key={job.org}>
                   <div className="flex flex-wrap items-baseline justify-between">
-                    <p className="font-ats text-[14px] font-bold text-ink">{job.title}</p>
+                    <p className="font-ats text-[15px] font-bold text-ink">{job.title}</p>
                     <span className="font-ats text-xs font-semibold text-ink">{job.dates.replace("—", "-")}</span>
                   </div>
-                  <p className="font-ats text-xs font-semibold text-ink">
+                  <p className="font-ats text-[13px] font-semibold text-ink mt-0.5">
                     {job.org} &nbsp;|&nbsp; {job.type}
                   </p>
-                  <ul className="mt-1.5 list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1">
+                  <ul className="mt-2 list-disc pl-5 font-ats text-[13px] leading-relaxed text-ink space-y-1.5">
                     {job.bullets.map((b) => (
                       <li key={b}>{b}</li>
                     ))}
@@ -68,11 +68,11 @@ export function AtsResume() {
           </section>
 
           {/* Selected Projects */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Key Projects & Case Studies</Heading>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {resume.projects.map((p) => (
-                <div key={p.title} className="font-ats text-[12.5px] leading-relaxed text-ink">
+                <div key={p.title} className="font-ats text-[13px] leading-relaxed text-ink">
                   <span className="font-bold">{p.title}: </span>
                   <span>{p.detail}</span>
                 </div>
@@ -82,28 +82,28 @@ export function AtsResume() {
         </div>
 
         {/* Page 1 Footer */}
-        <footer className="mt-4 flex items-center justify-between border-t border-ink/40 pt-2 text-[11px] text-ink">
+        <footer className="mt-6 flex items-center justify-between border-t border-ink/40 pt-3 text-xs text-ink">
           <span>{resume.name} — UX/UI Designer</span>
-          <span className="font-semibold">Page 1 of 2</span>
+          <span className="font-bold">Page 1 of 2</span>
         </footer>
       </article>
 
       {/* PAGE 2 */}
-      <article className="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-10 sm:py-9 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
+      <article className="resume-page mx-auto flex flex-col justify-between bg-white px-8 py-8 sm:px-11 sm:py-10 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.28)]">
         <div>
           {/* Header Sub-bar */}
-          <header className="text-left border-b-2 border-ink pb-2.5 flex items-baseline justify-between">
+          <header className="text-left border-b-2 border-ink pb-3.5 flex items-baseline justify-between">
             <div>
-              <h2 className="font-ats text-lg font-bold uppercase tracking-tight text-ink">{resume.name}</h2>
-              <p className="font-ats text-xs font-semibold text-ink">{resume.role} · Technical Profile</p>
+              <h2 className="font-ats text-xl font-bold uppercase tracking-tight text-ink">{resume.name}</h2>
+              <p className="font-ats text-xs font-semibold text-ink mt-0.5">{resume.role} · Technical Profile & Credentials</p>
             </div>
-            <p className="font-ats text-xs text-ink">{resume.email}</p>
+            <p className="font-ats text-xs font-medium text-ink">{resume.email}</p>
           </header>
 
           {/* Skills & Tools */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Technical & Design Skills</Heading>
-            <ul className="list-disc pl-5 font-ats text-[12.5px] leading-relaxed text-ink space-y-1.5">
+            <ul className="list-disc pl-5 font-ats text-[13px] leading-relaxed text-ink space-y-2">
               <li>
                 <span className="font-bold">Core Skills & Methodologies: </span>
                 {skillLine.join(", ")}
@@ -128,9 +128,9 @@ export function AtsResume() {
           </section>
 
           {/* Education */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Education</Heading>
-            <div className="space-y-2 font-ats text-[12.5px] leading-snug text-ink">
+            <div className="space-y-3 font-ats text-[13px] leading-snug text-ink">
               {resume.education.map((ed) => (
                 <div key={ed.school} className="flex flex-wrap justify-between items-baseline">
                   <span>
@@ -143,9 +143,9 @@ export function AtsResume() {
           </section>
 
           {/* Certifications */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Certifications & Credentials</Heading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 font-ats text-[12.5px] text-ink">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 font-ats text-[13px] text-ink">
               {resume.certifications.map((c) => (
                 <div key={c.name} className="flex items-baseline justify-between">
                   <span className="font-medium">• {c.name}</span>
@@ -156,16 +156,16 @@ export function AtsResume() {
           </section>
 
           {/* Languages */}
-          <section className="mt-4">
+          <section className="mt-6">
             <Heading>Languages</Heading>
-            <p className="font-ats text-[12.5px] text-ink">{resume.languages.join("   ·   ")}</p>
+            <p className="font-ats text-[13px] text-ink">{resume.languages.join("   ·   ")}</p>
           </section>
         </div>
 
         {/* Page 2 Footer */}
-        <footer className="mt-4 flex items-center justify-between border-t border-ink/40 pt-2 text-[11px] text-ink">
+        <footer className="mt-6 flex items-center justify-between border-t border-ink/40 pt-3 text-xs text-ink">
           <span>{resume.email} &nbsp;|&nbsp; {resume.phone}</span>
-          <span className="font-semibold">Page 2 of 2</span>
+          <span className="font-bold">Page 2 of 2</span>
         </footer>
       </article>
     </div>
