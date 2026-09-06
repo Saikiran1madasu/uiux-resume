@@ -1,0 +1,11 @@
+node_modules
+.vercel
+dist
+.output
+.nitro
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.grok/*.log

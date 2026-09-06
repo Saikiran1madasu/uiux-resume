@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Madasu Sai Kiran — UX/UI Designer",
+      "hasCanvas": false,
+      "bodyTextLen": 3408,
+      "bodyTextHash": "494235a57a8297fa14be6717c229f16ca724ef68dd5121f7e0b24a8a4fa654ae",
+      "bodyTextPrefix": "Job-ready resume Use ATS for portals. Use Designed when a person",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Madasu Sai Kiran — UX/UI Designer",
+      "hasCanvas": false,
+      "bodyTextLen": 3408,
+      "bodyTextHash": "494235a57a8297fa14be6717c229f16ca724ef68dd5121f7e0b24a8a4fa654ae",
+      "bodyTextPrefix": "Job-ready resume Use ATS for portals. Use Designed when a person",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
