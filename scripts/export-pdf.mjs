@@ -14,16 +14,19 @@ async function exportPdfs() {
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
   const page = await browser.newPage({
-    viewport: { width: 1200, height: 1600 },
+    viewport: { width: 794, height: 1123 }, // Exact A4 96dpi pixel ratio
     deviceScaleFactor: 2,
   });
 
   await page.goto(`file://${indexPath}`, { waitUntil: "networkidle" });
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(500);
+
+  // Set print media emulation so @media print takes effect
+  await page.emulateMedia({ media: "print" });
 
   // 1. Designed Resume (Default view)
   await page.evaluate(() => window.switchView('designed'));
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(400);
   
   const designedPdfPath = path.join(root, "Madasu_Sai_Kiran_Designed_Resume.pdf");
   const uiuxResumePdfPath = path.join(root, "uiux_resume.pdf");
@@ -32,7 +35,8 @@ async function exportPdfs() {
     path: designedPdfPath,
     format: "A4",
     printBackground: true,
-    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+    preferCSSPageSize: true,
+    margin: { top: "0mm", bottom: "0mm", left: "0mm", right: "0mm" },
   });
 
   fs.copyFileSync(designedPdfPath, uiuxResumePdfPath);
@@ -40,13 +44,14 @@ async function exportPdfs() {
 
   // 2. ATS Resume
   await page.evaluate(() => window.switchView('ats'));
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(400);
   const atsPdfPath = path.join(root, "Madasu_Sai_Kiran_ATS_Resume.pdf");
   await page.pdf({
     path: atsPdfPath,
     format: "A4",
     printBackground: true,
-    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+    preferCSSPageSize: true,
+    margin: { top: "0mm", bottom: "0mm", left: "0mm", right: "0mm" },
   });
   console.log("Exported ATS Resume PDF to:", atsPdfPath);
 
@@ -55,13 +60,14 @@ async function exportPdfs() {
     window.switchView('cover-letter');
     window.switchCoverLetterVariant('concise');
   });
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(400);
   const coverPdfPath = path.join(root, "Madasu_Sai_Kiran_Cover_Letter.pdf");
   await page.pdf({
     path: coverPdfPath,
     format: "A4",
     printBackground: true,
-    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+    preferCSSPageSize: true,
+    margin: { top: "0mm", bottom: "0mm", left: "0mm", right: "0mm" },
   });
   console.log("Exported Cover Letter PDF to:", coverPdfPath);
 

@@ -56,28 +56,37 @@
 
 @page {
   size: A4 portrait;
-  margin: 0;
+  margin: 0mm;
 }
 
 @media print {
   html,
   body {
-    background: white !important;
+    background: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    width: 210mm !important;
   }
 
   .no-print {
     display: none !important;
   }
 
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    display: block !important;
+  }
+
   .resume-sheet,
   .resume-page {
     box-shadow: none !important;
     border: none !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     width: 210mm !important;
     min-height: 297mm !important;
     height: 297mm !important;
