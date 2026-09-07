@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madasu Sai Kiran — UX/UI Designer Resume</title>
-  <meta name="description" content="2-Page print-ready Designed and ATS resume for Madasu Sai Kiran, UX/UI designer specializing in fintech and marketing platforms." />
+  <title>Madasu Sai Kiran — UX/UI Designer Resume & Cover Letter</title>
+  <meta name="description" content="Print-ready Designed Resume, ATS Resume, and matching Cover Letter for Madasu Sai Kiran, UX/UI Designer." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,18 +83,18 @@
 
   <!-- Top Navigation Bar -->
   <div class="no-print border-b border-rule bg-cream/90 sticky top-0 z-50 backdrop-blur-sm shadow-sm">
-    <div class="mx-auto max-w-4xl px-4 py-4 sm:px-6">
+    <div class="mx-auto max-w-5xl px-4 py-4 sm:px-6">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Two-Page Resume · Same Content</p>
-          <h1 class="text-xl sm:text-2xl font-bold font-display text-ink">Madasu Sai Kiran — Resume Pack</h1>
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Complete Job Application Suite</p>
+          <h1 class="text-xl sm:text-2xl font-bold font-display text-ink">Madasu Sai Kiran — Application Pack</h1>
         </div>
         
         <!-- Controls & Actions -->
         <div class="flex flex-wrap items-center gap-2">
           <button onclick="window.print()" class="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow hover:bg-accent-deep transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9h6V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4z"></path></svg>
-            Print / Save 2-Page PDF
+            Print / Save PDF
           </button>
           <button onclick="copyEmail()" id="emailBtn" class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium hover:border-accent transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -107,28 +107,42 @@
         </div>
       </div>
 
-      <!-- Version Cards Toggle -->
-      <div class="mt-4 grid gap-3 sm:grid-cols-2">
-        <div id="cardDesigned" onclick="switchView('designed')" class="cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream">
+      <!-- Version Cards Toggle (3 Options) -->
+      <div class="mt-4 grid gap-3 sm:grid-cols-3">
+        <!-- Tab 1: Designed Resume -->
+        <div id="cardDesigned" onclick="switchView('designed')" class="cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm">
           <div class="flex items-center justify-between">
             <p class="text-sm font-bold flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
-              Type 1 · Designed Resume (2 Pages)
+              Designed Resume
             </p>
             <span id="badgeDesigned" class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-accent text-white">Active</span>
           </div>
-          <p id="descDesigned" class="mt-1 text-xs text-paper-deep">Warm cream aesthetic, structured 2-page pagination. Page 1: Experience & Projects, Page 2: Skills, Tools, Education & Certs.</p>
+          <p id="descDesigned" class="mt-1 text-xs text-paper-deep">2-Page warm cream aesthetic for recruiters and interviews.</p>
         </div>
 
-        <div id="cardAts" onclick="switchView('ats')" class="cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink">
+        <!-- Tab 2: ATS Resume -->
+        <div id="cardAts" onclick="switchView('ats')" class="cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink hover:border-accent">
           <div class="flex items-center justify-between">
             <p class="text-sm font-bold flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
-              Type 2 · ATS Resume (2 Pages)
+              ATS Resume
             </p>
             <span id="badgeAts" class="hidden text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-accent text-white">Active</span>
           </div>
-          <p id="descAts" class="mt-1 text-xs text-muted">Clean 2-page Arial single-column layout. High ATS keyword density with measurable impact metrics.</p>
+          <p id="descAts" class="mt-1 text-xs text-muted">2-Page clean single-column Arial layout for job portals.</p>
+        </div>
+
+        <!-- Tab 3: Cover Letter -->
+        <div id="cardCoverLetter" onclick="switchView('cover-letter')" class="cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink hover:border-accent">
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-bold flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+              Cover Letter
+            </p>
+            <span id="badgeCoverLetter" class="hidden text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-accent text-white">Active</span>
+          </div>
+          <p id="descCoverLetter" class="mt-1 text-xs text-muted">1-Page matching cover letter showcasing UX impact & design systems.</p>
         </div>
       </div>
     </div>
@@ -144,7 +158,7 @@
       <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-6 py-6 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-9 sm:py-7">
         <div>
           <!-- Header -->
-          <header className="border-b border-rule pb-3">
+          <header class="border-b border-rule pb-3">
             <p class="font-sans text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.26em] text-accent">UX / UI Designer</p>
             <h1 class="mt-0.5 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Madasu Sai Kiran</h1>
             <div class="mt-2 flex flex-wrap items-center justify-between gap-y-1 gap-x-3 border-t border-rule/50 pt-2 font-sans text-[12.5px] sm:text-[13px] text-ink-soft">
@@ -627,43 +641,126 @@
       </article>
     </div>
 
+
+    <!-- TYPE 3: COVER LETTER (1 PAGE) -->
+    <div id="viewCoverLetter" class="hidden space-y-8 sm:space-y-10 print:space-y-0 w-full max-w-[210mm] font-sans">
+      <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-6 py-6 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-10 sm:py-9">
+        <div>
+          <!-- Header matching Designed Resume -->
+          <header class="border-b border-rule pb-3.5">
+            <p class="font-sans text-[11.5px] sm:text-xs font-bold uppercase tracking-[0.26em] text-accent">UX / UI Designer</p>
+            <h1 class="mt-0.5 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Madasu Sai Kiran</h1>
+            <div class="mt-2.5 flex flex-wrap items-center justify-between gap-y-1 gap-x-3 border-t border-rule/50 pt-2 font-sans text-[12.5px] sm:text-[13px] text-ink-soft">
+              <div><a class="font-medium hover:text-accent transition-colors" href="tel:+917981231628">+91 79812 31628</a></div>
+              <span class="hidden text-rule sm:inline">·</span>
+              <div><a class="break-all font-medium hover:text-accent transition-colors" href="mailto:Saikiran123.madasu@gmail.com">Saikiran123.madasu@gmail.com</a></div>
+              <span class="hidden text-rule sm:inline">·</span>
+              <div class="font-medium">Khammam, Telangana</div>
+              <span class="hidden text-rule sm:inline">·</span>
+              <div><a class="break-all font-medium text-accent hover:underline" href="https://saikiran1madasu.github.io/portfolio/" target="_blank">saikiran1madasu.github.io/portfolio</a></div>
+            </div>
+          </header>
+
+          <!-- Letter Meta / Date & Subject -->
+          <div class="mt-5 sm:mt-6 flex flex-wrap items-baseline justify-between gap-2 border-b border-rule/60 pb-3 text-xs sm:text-[13px] text-muted">
+            <span class="font-semibold uppercase tracking-wider text-ink-soft">September 2026</span>
+            <span class="font-semibold text-accent">Re: Application for UX / UI Designer Role</span>
+          </div>
+
+          <!-- Salutation -->
+          <div class="mt-5 sm:mt-6 text-[13.5px] sm:text-[14px] font-bold text-ink">
+            Dear Hiring Manager &amp; Design Team,
+          </div>
+
+          <!-- Body Paragraphs -->
+          <div class="mt-3.5 space-y-3.5 text-[13px] sm:text-[13.5px] leading-relaxed text-ink-soft">
+            <p>
+              I am writing to express my strong interest in the UX/UI Designer position. With a solid track record of shipping 7+ responsive web platforms and 3 mobile applications across fintech, SaaS, and digital marketing ecosystems, I specialize in transforming complex user requirements into intuitive, accessible, and conversion-focused digital experiences.
+            </p>
+            <p>
+              In my current role at Intexm Media, I lead end-to-end product design across mobile apps and responsive web platforms. By conducting qualitative user research, usability testing sessions, and customer journey mapping, I identified critical friction points and redesigned high-value transaction flows—driving a 22% uplift in user onboarding conversion. My approach pairs rigorous user-centered methodologies with data-informed design decisions to deliver measurable product and business outcomes.
+            </p>
+            <p>
+              Beyond individual features, I take pride in crafting scalable design systems from the ground up. In Figma, I architected comprehensive multi-brand component libraries utilizing Auto Layout, component variants, and design tokens, reducing developer handoff time by 30% and ensuring strict compliance with WCAG 2.1 AA accessibility guidelines. Furthermore, I integrate modern AI-assisted workflows (Cursor AI, Antigravity, Claude) and rapid prototyping tools (Framer, FigJam, Tailwind CSS) to accelerate iteration cycles from low-fidelity wireframes to production-ready interfaces.
+            </p>
+            <p>
+              I am excited about the opportunity to bring my problem-solving mindset, passion for craft, and collaborative energy to your team. You can review my complete case studies, interactive prototypes, and design artifacts on my portfolio at saikiran1madasu.github.io/portfolio. Thank you for your time and consideration; I look forward to discussing how my experience and skills can contribute to your product vision.
+            </p>
+          </div>
+
+          <!-- Signoff -->
+          <div class="mt-6 sm:mt-7">
+            <p class="text-[13px] sm:text-[13.5px] text-ink-soft">Sincerely,</p>
+            <div class="mt-3">
+              <p class="font-display text-lg sm:text-xl font-bold text-ink">Madasu Sai Kiran</p>
+              <p class="font-sans text-xs sm:text-[12.5px] font-semibold text-accent uppercase tracking-wider mt-0.5">
+                UX / UI Designer
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-6 flex items-center justify-between border-t border-rule/70 pt-3 text-[11px] sm:text-[11.5px] text-muted">
+          <span class="font-medium text-ink-soft">Madasu Sai Kiran — UX/UI Designer · Saikiran123.madasu@gmail.com</span>
+          <span class="font-semibold">Cover Letter · Page 1 of 1</span>
+        </footer>
+      </article>
+    </div>
+
   </main>
 
   <script>
     function switchView(type) {
       const vDesigned = document.getElementById('viewDesigned');
       const vAts = document.getElementById('viewAts');
+      const vCoverLetter = document.getElementById('viewCoverLetter');
+
       const cDesigned = document.getElementById('cardDesigned');
       const cAts = document.getElementById('cardAts');
+      const cCoverLetter = document.getElementById('cardCoverLetter');
+
       const bDesigned = document.getElementById('badgeDesigned');
       const bAts = document.getElementById('badgeAts');
+      const bCoverLetter = document.getElementById('badgeCoverLetter');
+
       const dDesigned = document.getElementById('descDesigned');
       const dAts = document.getElementById('descAts');
+      const dCoverLetter = document.getElementById('descCoverLetter');
+
+      // Hide all first
+      vDesigned.classList.add('hidden');
+      vAts.classList.add('hidden');
+      vCoverLetter.classList.add('hidden');
+
+      // Reset card styles
+      cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink hover:border-accent';
+      cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink hover:border-accent';
+      cCoverLetter.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink hover:border-accent';
+
+      bDesigned.classList.add('hidden');
+      bAts.classList.add('hidden');
+      bCoverLetter.classList.add('hidden');
+
+      dDesigned.className = 'mt-1 text-xs text-muted';
+      dAts.className = 'mt-1 text-xs text-muted';
+      dCoverLetter.className = 'mt-1 text-xs text-muted';
 
       if (type === 'designed') {
         vDesigned.classList.remove('hidden');
-        vAts.classList.add('hidden');
-
-        cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream';
-        cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink';
-
+        cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bDesigned.classList.remove('hidden');
-        bAts.classList.add('hidden');
-
         dDesigned.className = 'mt-1 text-xs text-paper-deep';
-        dAts.className = 'mt-1 text-xs text-muted';
-      } else {
-        vDesigned.classList.add('hidden');
+      } else if (type === 'ats') {
         vAts.classList.remove('hidden');
-
-        cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream';
-        cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-rule bg-cream text-ink';
-
+        cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bAts.classList.remove('hidden');
-        bDesigned.classList.add('hidden');
-
         dAts.className = 'mt-1 text-xs text-paper-deep';
-        dDesigned.className = 'mt-1 text-xs text-muted';
+      } else if (type === 'cover-letter') {
+        vCoverLetter.classList.remove('hidden');
+        cCoverLetter.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
+        bCoverLetter.classList.remove('hidden');
+        dCoverLetter.className = 'mt-1 text-xs text-paper-deep';
       }
     }
 
