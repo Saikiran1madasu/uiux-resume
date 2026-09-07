@@ -5,6 +5,7 @@ import { AtsResume } from "@/components/ats-resume";
 import { CoverLetter } from "@/components/cover-letter";
 import { ResumeSheet } from "@/components/resume-sheet";
 import { resume } from "@/data/resume";
+import { coverLetterPlainText } from "@/data/cover-letter";
 import { resumePlainText } from "@/lib/resume-text";
 
 type Version = "designed" | "ats" | "cover-letter";
@@ -42,6 +43,16 @@ function Home() {
     const a = document.createElement("a");
     a.href = url;
     a.download = "Madasu_Sai_Kiran_UX_UI_Resume.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadCoverLetter() {
+    const blob = new Blob([coverLetterPlainText("concise")], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Madasu_Sai_Kiran_Cover_Letter.txt";
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -84,11 +95,12 @@ function Home() {
               </button>
               <button
                 type="button"
-                onClick={downloadTxt}
+                onClick={mode === "cover-letter" ? downloadCoverLetter : downloadTxt}
                 className="inline-flex min-h-10 items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium text-ink hover:border-accent transition"
+                title={mode === "cover-letter" ? "Download Cover Letter (.txt)" : "Download Resume (.txt)"}
               >
                 <FileText className="size-4" />
-                ATS .txt
+                {mode === "cover-letter" ? "Cover Letter .txt" : "ATS Resume .txt"}
               </button>
               <button
                 type="button"

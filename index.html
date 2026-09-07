@@ -96,6 +96,10 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9h6V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4z"></path></svg>
             Print / Save PDF
           </button>
+          <button onclick="downloadActiveTxt()" id="downloadTxtBtn" class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium hover:border-accent transition" title="Download Plain Text">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            <span id="downloadBtnText">ATS Resume .txt</span>
+          </button>
           <button onclick="copyEmail()" id="emailBtn" class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-2 text-xs sm:text-sm font-medium hover:border-accent transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             <span id="emailText">Copy email</span>
@@ -643,7 +647,60 @@
 
 
     <!-- TYPE 3: COVER LETTER (1 PAGE) -->
-    <div id="viewCoverLetter" class="hidden space-y-8 sm:space-y-10 print:space-y-0 w-full max-w-[210mm] font-sans">
+    <div id="viewCoverLetter" class="hidden space-y-4 print:space-y-0 w-full max-w-[210mm] font-sans">
+      <!-- Screen-only Length Selector & Actions -->
+      <div class="no-print flex flex-wrap items-center justify-between gap-3 rounded-lg border border-rule/70 bg-cream/80 p-2.5 px-4 text-xs shadow-xs">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-semibold text-ink-soft">Cover Letter Variant:</span>
+          <div class="flex flex-wrap items-center gap-1 bg-paper/80 p-1 rounded-md border border-rule/60">
+            <button
+              id="btnShort"
+              type="button"
+              onclick="switchCoverLetterVariant('short')"
+              class="rounded px-2.5 py-1 font-semibold transition text-xs text-ink-soft hover:text-ink hover:bg-cream"
+            >
+              Short · 100w
+            </button>
+            <button
+              id="btnConcise"
+              type="button"
+              onclick="switchCoverLetterVariant('concise')"
+              class="rounded px-2.5 py-1 font-semibold transition text-xs bg-ink text-cream shadow-xs"
+            >
+              Concise · 300w
+            </button>
+            <button
+              id="btnComprehensive"
+              type="button"
+              onclick="switchCoverLetterVariant('comprehensive')"
+              class="rounded px-2.5 py-1 font-semibold transition text-xs text-ink-soft hover:text-ink hover:bg-cream"
+            >
+              Comprehensive · 350w
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            onclick="downloadCoverLetterTxt()"
+            class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-2.5 py-1 text-xs font-semibold text-ink hover:border-accent hover:text-accent transition shadow-xs"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Download .txt
+          </button>
+          <button
+            type="button"
+            onclick="copyCoverLetterText()"
+            id="btnCopyCover"
+            class="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-2.5 py-1 text-xs font-semibold text-ink hover:border-accent hover:text-accent transition shadow-xs"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            <span id="copyCoverText">Copy Letter</span>
+          </button>
+        </div>
+      </div>
+
       <article class="resume-page mx-auto flex flex-col justify-between bg-cream px-6 py-6 text-ink shadow-[0_24px_60px_-24px_rgba(26,35,50,0.35)] sm:px-10 sm:py-9">
         <div>
           <!-- Header matching Designed Resume -->
@@ -662,17 +719,49 @@
           </header>
 
           <!-- Letter Subject -->
-          <div class="mt-5 sm:mt-6 border-b border-rule/60 pb-3 text-xs sm:text-[13px]">
+          <div class="mt-4 sm:mt-5 border-b border-rule/60 pb-2.5 text-xs sm:text-[13px]">
             <span class="font-bold text-accent uppercase tracking-wider">Re: Application for UX / UI Designer Role</span>
           </div>
 
           <!-- Salutation -->
-          <div class="mt-5 sm:mt-6 text-[13.5px] sm:text-[14px] font-bold text-ink">
+          <div class="mt-4 sm:mt-5 text-[13.5px] sm:text-[14px] font-bold text-ink">
             Dear Hiring Team,
           </div>
 
-          <!-- Body Paragraphs -->
-          <div class="mt-3.5 space-y-3.5 text-[13px] sm:text-[13.5px] leading-relaxed text-ink-soft">
+          <!-- Body Paragraphs (Short - 100 words) -->
+          <div id="coverBodyShort" class="hidden mt-3 space-y-3 text-[12.5px] sm:text-[13px] leading-relaxed text-ink-soft">
+            <p>
+              I am writing to express my strong interest in the UX/UI Designer role. With proven experience shipping 7+ web platforms and 3 mobile applications across fintech, SaaS, and marketing, I specialize in transforming complex user requirements into intuitive, accessible, and high-converting products.
+            </p>
+            <p>
+              At Intexm Media, I led end-to-end design initiatives that boosted onboarding conversion by 22% and architected Figma design systems reducing developer handoff time by 30%. Grounded in human-centered research and WCAG accessibility, I create scalable, business-driven user experiences.
+            </p>
+            <p>
+              You can explore my interactive prototypes at saikiran1madasu.github.io/portfolio. I would welcome the opportunity to discuss how my skill set can bring immediate value to your product team.
+            </p>
+          </div>
+
+          <!-- Body Paragraphs (Concise - 300 words) -->
+          <div id="coverBodyConcise" class="mt-3 space-y-3 text-[12.5px] sm:text-[13px] leading-relaxed text-ink-soft">
+            <p>
+              I am writing to express my strong interest in the UX/UI Designer role. As a product-focused designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech, SaaS, and marketing domains, I specialize in creating intuitive, accessible, and high-converting user experiences.
+            </p>
+            <p>
+              At Intexm Media, I lead end-to-end design initiatives from user discovery to production handoff. By conducting qualitative user research, journey mapping, and usability testing sessions, I identified critical user friction points and redesigned core transaction funnels, delivering a 22% increase in onboarding conversion. My work is grounded in human-centered design principles, ensuring every interface is backed by user evidence and business objectives.
+            </p>
+            <p>
+              I also place deep emphasis on scalable design systems and execution speed. In Figma, I architected multi-brand design systems utilizing Auto Layout, design tokens, and reusable component libraries that reduced developer handoff friction by 30% while ensuring WCAG 2.1 AA accessibility standards. Additionally, I leverage modern AI tools (Cursor AI, Antigravity, Claude) alongside rapid prototyping in Framer and Tailwind CSS to validate ideas early and iterate quickly.
+            </p>
+            <p>
+              Whether collaborating with cross-functional engineering teams or presenting design rationale to stakeholders, I focus on delivering seamless, delightful products that drive tangible results.
+            </p>
+            <p>
+              You can explore my interactive case studies and UI prototypes on my portfolio at saikiran1madasu.github.io/portfolio. Thank you for your time and consideration. I would welcome the opportunity to discuss how my design skill set and dedication can bring value to your product team.
+            </p>
+          </div>
+
+          <!-- Body Paragraphs (Comprehensive - 350 words) -->
+          <div id="coverBodyComprehensive" class="hidden mt-3 space-y-3 text-[12.5px] sm:text-[13px] leading-relaxed text-ink-soft">
             <p>
               I am writing to express my strong interest in the UX/UI Designer position. With a proven track record of shipping 7+ responsive web platforms and 3 mobile applications across fintech, SaaS, and digital marketing ecosystems, I specialize in transforming complex user requirements into intuitive, accessible, and conversion-focused digital experiences.
             </p>
@@ -688,9 +777,9 @@
           </div>
 
           <!-- Signoff -->
-          <div class="mt-6 sm:mt-7">
-            <p class="text-[13px] sm:text-[13.5px] text-ink-soft">Sincerely,</p>
-            <div class="mt-3">
+          <div class="mt-5 sm:mt-6">
+            <p class="text-[12.5px] sm:text-[13px] text-ink-soft">Sincerely,</p>
+            <div class="mt-2.5">
               <p class="font-display text-lg sm:text-xl font-bold text-ink">Madasu Sai Kiran</p>
               <p class="font-sans text-xs sm:text-[12.5px] font-semibold text-accent uppercase tracking-wider mt-0.5">
                 UX / UI Designer
@@ -700,7 +789,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="mt-6 flex items-center justify-between border-t border-rule/70 pt-3 text-[11px] sm:text-[11.5px] text-muted">
+        <footer class="mt-5 flex items-center justify-between border-t border-rule/70 pt-2.5 text-[11px] sm:text-[11.5px] text-muted">
           <span class="font-medium text-ink-soft">Madasu Sai Kiran — UX/UI Designer · Saikiran123.madasu@gmail.com</span>
           <span class="font-semibold">Cover Letter · Page 1 of 1</span>
         </footer>
@@ -710,7 +799,19 @@
   </main>
 
   <script>
+    let currentActiveView = 'designed';
+    let currentCoverVariant = 'concise';
+
+    const coverLetterTexts = {
+      short: `MADASU SAI KIRAN\nUX / UI Designer\n+91 79812 31628 | Saikiran123.madasu@gmail.com | Khammam, Telangana\nhttps://saikiran1madasu.github.io/portfolio/\n\nSubject: Application for UX / UI Designer Role\n\nDear Hiring Team,\n\nI am writing to express my strong interest in the UX/UI Designer role. With proven experience shipping 7+ web platforms and 3 mobile applications across fintech, SaaS, and marketing, I specialize in transforming complex user requirements into intuitive, accessible, and high-converting products.\n\nAt Intexm Media, I led end-to-end design initiatives that boosted onboarding conversion by 22% and architected Figma design systems reducing developer handoff time by 30%. Grounded in human-centered research and WCAG accessibility, I create scalable, business-driven user experiences.\n\nYou can explore my interactive prototypes at saikiran1madasu.github.io/portfolio. I would welcome the opportunity to discuss how my skill set can bring immediate value to your product team.\n\nSincerely,\nMadasu Sai Kiran\nUX / UI Designer`,
+      concise: `MADASU SAI KIRAN\nUX / UI Designer\n+91 79812 31628 | Saikiran123.madasu@gmail.com | Khammam, Telangana\nhttps://saikiran1madasu.github.io/portfolio/\n\nSubject: Application for UX / UI Designer Role\n\nDear Hiring Team,\n\nI am writing to express my strong interest in the UX/UI Designer role. As a product-focused designer with hands-on experience shipping 7+ responsive web platforms and 3 mobile applications across fintech, SaaS, and marketing domains, I specialize in creating intuitive, accessible, and high-converting user experiences.\n\nAt Intexm Media, I lead end-to-end design initiatives from user discovery to production handoff. By conducting qualitative user research, journey mapping, and usability testing sessions, I identified critical user friction points and redesigned core transaction funnels, delivering a 22% increase in onboarding conversion. My work is grounded in human-centered design principles, ensuring every interface is backed by user evidence and business objectives.\n\nI also place deep emphasis on scalable design systems and execution speed. In Figma, I architected multi-brand design systems utilizing Auto Layout, design tokens, and reusable component libraries that reduced developer handoff friction by 30% while ensuring WCAG 2.1 AA accessibility standards. Additionally, I leverage modern AI tools (Cursor AI, Antigravity, Claude) alongside rapid prototyping in Framer and Tailwind CSS to validate ideas early and iterate quickly.\n\nWhether collaborating with cross-functional engineering teams or presenting design rationale to stakeholders, I focus on delivering seamless, delightful products that drive tangible results.\n\nYou can explore my interactive case studies and UI prototypes on my portfolio at saikiran1madasu.github.io/portfolio. Thank you for your time and consideration. I would welcome the opportunity to discuss how my design skill set and dedication can bring value to your product team.\n\nSincerely,\nMadasu Sai Kiran\nUX / UI Designer`,
+      comprehensive: `MADASU SAI KIRAN\nUX / UI Designer\n+91 79812 31628 | Saikiran123.madasu@gmail.com | Khammam, Telangana\nhttps://saikiran1madasu.github.io/portfolio/\n\nSubject: Application for UX / UI Designer Role\n\nDear Hiring Team,\n\nI am writing to express my strong interest in the UX/UI Designer position. With a proven track record of shipping 7+ responsive web platforms and 3 mobile applications across fintech, SaaS, and digital marketing ecosystems, I specialize in transforming complex user requirements into intuitive, accessible, and conversion-focused digital experiences.\n\nIn my role at Intexm Media, I lead end-to-end product design across mobile applications and responsive web platforms. By conducting qualitative user research, usability testing sessions, and customer journey mapping, I identified critical friction points and redesigned high-value transaction flows—driving a 22% uplift in user onboarding conversion. My approach pairs rigorous user-centered methodologies with data-informed design decisions to deliver measurable product and business outcomes.\n\nBeyond individual features, I take pride in crafting scalable design systems from the ground up. In Figma, I architected comprehensive multi-brand component libraries utilizing Auto Layout, component variants, and design tokens, reducing developer handoff time by 30% while ensuring strict compliance with WCAG 2.1 AA accessibility guidelines. Furthermore, I integrate modern AI-assisted workflows (Cursor AI, Antigravity, Claude) and rapid prototyping tools (Framer, FigJam, Tailwind CSS) to accelerate iteration cycles from low-fidelity wireframes to production-ready interfaces.\n\nI am excited about the opportunity to bring my problem-solving mindset, passion for craft, and collaborative energy to your organization. You can review my complete case studies, interactive prototypes, and design artifacts on my portfolio at saikiran1madasu.github.io/portfolio. Thank you for your time and consideration; I look forward to discussing how my experience and skills can contribute to your product vision.\n\nSincerely,\nMadasu Sai Kiran\nUX / UI Designer`
+    };
+
+    const resumeTxt = `MADASU SAI KIRAN\nUX/UI Designer\n+91 79812 31628 | Saikiran123.madasu@gmail.com | Khammam, Telangana\nhttps://saikiran1madasu.github.io/portfolio/\n\nSUMMARY\nUX/UI Designer with a proven track record of shipping 7+ responsive web platforms and 3 mobile applications across fintech, marketing, and SaaS products. Specializes in end-to-end product design: from user research, heuristic audits, and information architecture to high-fidelity UI, design systems, and rapid prototyping in Figma. Highly proficient in collaborating cross-functionally with engineers and product stakeholders to transform complex user flows into intuitive, accessible, and conversion-focused digital experiences.\n\nEXPERIENCE\nUX/UI Designer\nIntexm Media | Full-time | 2024 - Present\n- Lead end-to-end product design across mobile applications and responsive web platforms in fintech, resulting in a 22% uplift in user onboarding conversion.\n- Conducted qualitative user interviews, usability testing sessions, and journey mapping to identify user friction points and optimize high-value transaction funnels.\n- Architected and maintained comprehensive multi-brand design systems in Figma utilizing Auto Layout, component variants, and design tokens to streamline developer handoff by 30%.\n- Designed high-converting landing pages and promotional campaign portals compliant with WCAG accessibility guidelines, driving a 15% increase in user engagement.\n- Collaborated daily with frontend engineers and product managers in agile sprints to ensure pixel-perfect implementation across mobile and desktop breakpoints.\n\nIndependent UX/UI Designer\nFreelance | Contract | Ongoing\n- Delivered full-cycle UI/UX design for 1 mobile application and 2 responsive client websites, driving projects from initial wireframing to interactive prototypes.\n- Facilitated stakeholder discovery workshops, defined user personas, crafted user flows, and conducted competitor benchmarking to inform product strategy.\n- Performed usability audits and heuristic evaluations on live products, improving core navigation structures and reducing task completion times by 25%.\n- Developed responsive, production-ready marketing landing pages utilizing modern web builders, Tailwind CSS, and AI-assisted workflows.\n\nPROJECTS\nFintech Mobile Applications — 3 Apps\nArchitected intuitive iOS & Android experiences for fintech and rewards platforms. Designed biometric login, wallet dashboards, transaction histories, and gamified reward systems with end-to-end design handoff.\n\nMarketing & Web Platforms — 7+ Websites\nDesigned and deployed responsive web platforms and SaaS marketing pages with focus on visual storytelling, micro-interactions, responsive typography, and high-conversion lead generation.\n\nCampaign Portals & User Journeys\nEngineered multi-step onboarding funnels and promotional campaign experiences adhering strictly to UGC platform guidelines and WCAG 2.1 AA accessibility standards.\n\nDesign System & Component Library\nCreated a unified design system comprising 200+ atomic UI components, typography scales, color tokens, and interactive prototype guidelines in Figma.\n\nSKILLS\nCore Skills & Methodologies: User Interviews, Usability Testing, Competitor Benchmarking, Information Architecture, User Journey Mapping, User Flows & Wireflows, Personas & Empathy Mapping, Low-Fidelity Wireframing, High-Fidelity UI Design, Interactive Prototyping, Design Systems & Component Tokens, Product Design, Interaction Design, Accessibility (WCAG), Responsive Design, Fintech UI\nUI/UX Design: Figma (Auto Layout, Components, Tokens), FigJam, Balsamiq\nPrototyping & Developer Handoff: Adobe XD, Framer, Zeplin\nAI Workflow: Cursor AI, Antigravity, Claude, ChatGPT\nFrontend & Web Builders: HTML5 & CSS3, Tailwind CSS, Wix Studio\n\nEDUCATION\nB.Tech, Mining Engineering, Aditya University, 2020 - 2023\nDiploma, Mining Engineering, Anurag Engineering College, 2017 - 2020\n\nCERTIFICATIONS\nGoogle UX Design Professional Certificate, Coursera\nUser Experience Design, Accenture\nHuman-Centered Design 201: Prototyping, Acumen Academy\nIntroduction to Human-Centered Design, Acumen Academy\nVisual Communication & Design Theory, NPTEL (Swayam)\nAugmenting Design Thinking with HCI, NPTEL (Swayam)\n\nLANGUAGES\nEnglish (Fluent), Telugu (Native), Hindi (Conversational)`;
+
     function switchView(type) {
+      currentActiveView = type;
       const vDesigned = document.getElementById('viewDesigned');
       const vAts = document.getElementById('viewAts');
       const vCoverLetter = document.getElementById('viewCoverLetter');
@@ -726,6 +827,8 @@
       const dDesigned = document.getElementById('descDesigned');
       const dAts = document.getElementById('descAts');
       const dCoverLetter = document.getElementById('descCoverLetter');
+
+      const downloadBtnText = document.getElementById('downloadBtnText');
 
       // Hide all first
       vDesigned.classList.add('hidden');
@@ -750,16 +853,95 @@
         cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bDesigned.classList.remove('hidden');
         dDesigned.className = 'mt-1 text-xs text-paper-deep';
+        if (downloadBtnText) downloadBtnText.innerText = 'ATS Resume .txt';
       } else if (type === 'ats') {
         vAts.classList.remove('hidden');
         cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bAts.classList.remove('hidden');
         dAts.className = 'mt-1 text-xs text-paper-deep';
+        if (downloadBtnText) downloadBtnText.innerText = 'ATS Resume .txt';
       } else if (type === 'cover-letter') {
         vCoverLetter.classList.remove('hidden');
         cCoverLetter.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bCoverLetter.classList.remove('hidden');
         dCoverLetter.className = 'mt-1 text-xs text-paper-deep';
+        if (downloadBtnText) downloadBtnText.innerText = 'Cover Letter .txt';
+      }
+    }
+
+    function switchCoverLetterVariant(variant) {
+      currentCoverVariant = variant;
+      const bShort = document.getElementById('btnShort');
+      const bConcise = document.getElementById('btnConcise');
+      const bComp = document.getElementById('btnComprehensive');
+      
+      const bodyShort = document.getElementById('coverBodyShort');
+      const bodyConcise = document.getElementById('coverBodyConcise');
+      const bodyComp = document.getElementById('coverBodyComprehensive');
+
+      // Hide all bodies
+      bodyShort.classList.add('hidden');
+      bodyConcise.classList.add('hidden');
+      bodyComp.classList.add('hidden');
+
+      // Reset button styles
+      const inactiveClass = 'rounded px-2.5 py-1 font-semibold transition text-xs text-ink-soft hover:text-ink hover:bg-cream';
+      const activeClass = 'rounded px-2.5 py-1 font-semibold transition text-xs bg-ink text-cream shadow-xs';
+      
+      bShort.className = inactiveClass;
+      bConcise.className = inactiveClass;
+      bComp.className = inactiveClass;
+
+      if (variant === 'short') {
+        bodyShort.classList.remove('hidden');
+        bShort.className = activeClass;
+      } else if (variant === 'concise') {
+        bodyConcise.classList.remove('hidden');
+        bConcise.className = activeClass;
+      } else if (variant === 'comprehensive') {
+        bodyComp.classList.remove('hidden');
+        bComp.className = activeClass;
+      }
+    }
+
+    function downloadActiveTxt() {
+      if (currentActiveView === 'cover-letter') {
+        downloadCoverLetterTxt();
+      } else {
+        downloadResumeTxt();
+      }
+    }
+
+    function downloadResumeTxt() {
+      const blob = new Blob([resumeTxt], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Madasu_Sai_Kiran_UX_UI_Resume.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadCoverLetterTxt() {
+      const text = coverLetterTexts[currentCoverVariant] || coverLetterTexts.concise;
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Madasu_Sai_Kiran_Cover_Letter_${currentCoverVariant}.txt`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    async function copyCoverLetterText() {
+      try {
+        const text = coverLetterTexts[currentCoverVariant] || coverLetterTexts.concise;
+        await navigator.clipboard.writeText(text);
+        const span = document.getElementById('copyCoverText');
+        span.innerText = 'Copied!';
+        setTimeout(() => { span.innerText = 'Copy Letter'; }, 2000);
+      } catch (err) {
+        // Fallback
       }
     }
 
