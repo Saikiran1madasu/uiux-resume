@@ -1,7 +1,7 @@
 import { coverLetter } from "@/data/cover-letter";
 
 export function CoverLetter() {
-  const { candidate, recipient, date, subject, paragraphs, signoff } = coverLetter;
+  const { candidate, recipient, paragraphs, signoff } = coverLetter;
 
   return (
     <div className="mx-auto w-full max-w-[210mm] font-sans">
@@ -43,10 +43,9 @@ export function CoverLetter() {
             </div>
           </header>
 
-          {/* Letter Meta / Date & Subject */}
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-baseline justify-between gap-2 border-b border-rule/60 pb-3 text-xs sm:text-[13px] text-muted">
-            <span className="font-semibold uppercase tracking-wider text-ink-soft">{date}</span>
-            <span className="font-semibold text-accent">Re: {subject}</span>
+          {/* Letter Subject */}
+          <div className="mt-5 sm:mt-6 border-b border-rule/60 pb-3 text-xs sm:text-[13px]">
+            <span className="font-bold text-accent uppercase tracking-wider">Re: {recipient.subject}</span>
           </div>
 
           {/* Salutation */}
