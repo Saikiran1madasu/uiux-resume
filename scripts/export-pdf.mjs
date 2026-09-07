@@ -1,0 +1,74 @@
+import { chromium } from "playwright";
+import path from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(__dirname, "..");
+const indexPath = path.join(root, "index.html");
+
+async function exportPdfs() {
+  const browser = await chromium.launch({
+    executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+  });
+  const page = await browser.newPage({
+    viewport: { width: 1200, height: 1600 },
+    deviceScaleFactor: 2,
+  });
+
+  await page.goto(`file://${indexPath}`, { waitUntil: "networkidle" });
+  await page.waitForTimeout(1000);
+
+  // 1. Designed Resume (Default view)
+  await page.evaluate(() => window.switchView('designed'));
+  await page.waitForTimeout(500);
+  
+  const designedPdfPath = path.join(root, "Madasu_Sai_Kiran_Designed_Resume.pdf");
+  const uiuxResumePdfPath = path.join(root, "uiux_resume.pdf");
+
+  await page.pdf({
+    path: designedPdfPath,
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  });
+
+  fs.copyFileSync(designedPdfPath, uiuxResumePdfPath);
+  console.log("Exported Designed Resume PDF to:", designedPdfPath, "and", uiuxResumePdfPath);
+
+  // 2. ATS Resume
+  await page.evaluate(() => window.switchView('ats'));
+  await page.waitForTimeout(500);
+  const atsPdfPath = path.join(root, "Madasu_Sai_Kiran_ATS_Resume.pdf");
+  await page.pdf({
+    path: atsPdfPath,
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  });
+  console.log("Exported ATS Resume PDF to:", atsPdfPath);
+
+  // 3. Cover Letter (Concise)
+  await page.evaluate(() => {
+    window.switchView('cover-letter');
+    window.switchCoverLetterVariant('concise');
+  });
+  await page.waitForTimeout(500);
+  const coverPdfPath = path.join(root, "Madasu_Sai_Kiran_Cover_Letter.pdf");
+  await page.pdf({
+    path: coverPdfPath,
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  });
+  console.log("Exported Cover Letter PDF to:", coverPdfPath);
+
+  await browser.close();
+}
+
+exportPdfs().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
