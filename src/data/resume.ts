@@ -55,7 +55,7 @@ export const resume = {
     {
       title: "Design System & Component Library",
       detail:
-        "Created a unified design system comprising 200+ atomic UI components, typography scales, color tokens, and interactive prototype guidelines in Figma.",
+        "Created a unified design system comprising atomic UI components, typography scales, color tokens, and interactive prototype guidelines in Figma.",
     },
   ],
   education: [
