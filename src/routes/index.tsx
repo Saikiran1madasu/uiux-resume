@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Columns2, ExternalLink, FileText, LayoutList, Mail, PenTool, Printer } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AtsResume } from "@/components/ats-resume";
 import { CoverLetter } from "@/components/cover-letter";
 import { ResumeSheet } from "@/components/resume-sheet";
@@ -22,6 +22,14 @@ function Home() {
   const { v: mode, print } = Route.useSearch();
   const navigate = Route.useNavigate();
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (mode === "cover-letter") {
+      document.title = "Madasu Sai Kiran — UX/UI Designer Cover Letter";
+    } else {
+      document.title = "Madasu Sai Kiran — UX/UI Designer Resume";
+    }
+  }, [mode]);
 
   function setMode(next: Version) {
     void navigate({ search: (prev) => ({ ...prev, v: next }) });
@@ -80,7 +88,7 @@ function Home() {
                 Complete Job Application Suite
               </p>
               <h1 className="mt-0.5 font-display text-xl sm:text-2xl font-bold text-ink">
-                Madasu Sai Kiran — Resume & Cover Letter Pack
+                Madasu Sai Kiran — UX/UI Designer Resume
               </h1>
             </div>
 

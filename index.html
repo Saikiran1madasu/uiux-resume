@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madasu Sai Kiran — UX/UI Designer Resume & Cover Letter</title>
+  <title>Madasu Sai Kiran — UX/UI Designer Resume</title>
   <meta name="description" content="Print-ready Designed Resume, ATS Resume, and matching Cover Letter for Madasu Sai Kiran, UX/UI Designer." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -908,18 +908,21 @@ English (Fluent), Telugu (Native), Hindi (Conversational)`;
       dCoverLetter.className = 'mt-1 text-xs text-muted';
 
       if (type === 'designed') {
+        document.title = 'Madasu Sai Kiran — UX/UI Designer Resume';
         vDesigned.classList.remove('hidden');
         cDesigned.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bDesigned.classList.remove('hidden');
         dDesigned.className = 'mt-1 text-xs text-paper-deep';
         if (downloadBtnText) downloadBtnText.innerText = 'ATS Resume .txt';
       } else if (type === 'ats') {
+        document.title = 'Madasu Sai Kiran — UX/UI Designer Resume';
         vAts.classList.remove('hidden');
         cAts.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bAts.classList.remove('hidden');
         dAts.className = 'mt-1 text-xs text-paper-deep';
         if (downloadBtnText) downloadBtnText.innerText = 'ATS Resume .txt';
       } else if (type === 'cover-letter') {
+        document.title = 'Madasu Sai Kiran — UX/UI Designer Cover Letter';
         vCoverLetter.classList.remove('hidden');
         cCoverLetter.className = 'cursor-pointer rounded-md border p-3.5 transition border-ink bg-ink text-cream shadow-sm';
         bCoverLetter.classList.remove('hidden');
