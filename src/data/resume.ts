@@ -8,7 +8,7 @@ export const resume = {
   portfolio: "https://saikiran1madasu.github.io/portfolio/",
   portfolioLabel: "saikiran1madasu.github.io/portfolio",
   summary:
-    "UX/UI Designer with a proven track record of shipping 12+ responsive web platforms and 3 mobile applications across fintech, marketing, and SaaS products. Specializes in end-to-end product design: from user research, heuristic audits, and information architecture to high-fidelity UI, design systems, and rapid prototyping in Figma. Highly proficient in collaborating cross-functionally with engineers and product stakeholders to transform complex user flows into intuitive, accessible, and conversion-focused digital experiences.",
+    "UX/UI Designer with a proven track record of shipping 13+ responsive web platforms and 3 mobile applications across fintech, marketing, and SaaS products. Specializes in end-to-end product design: from user research, heuristic audits, and information architecture to high-fidelity UI, design systems, and rapid prototyping in Figma. Highly proficient in collaborating cross-functionally with engineers and product stakeholders to transform complex user flows into intuitive, accessible, and conversion-focused digital experiences.",
   experience: [
     {
       title: "UX/UI Designer",
@@ -43,7 +43,7 @@ export const resume = {
         "Architected intuitive iOS & Android experiences for fintech and rewards platforms. Designed biometric login, wallet dashboards, transaction histories, and gamified reward systems with end-to-end design handoff.",
     },
     {
-      title: "Marketing & Web Platforms — 12+ Websites",
+      title: "Marketing & Web Platforms — 13+ Websites",
       detail:
         "Designed and deployed responsive web platforms and SaaS marketing pages with focus on visual storytelling, micro-interactions, responsive typography, and high-conversion lead generation.",
     },
